@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aeon Tech Solutions — Global Supply &amp; Support</title>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js" integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
+<style>
+  html, body { margin: 0; background: #0D0F11; overflow: hidden; }
+  svg { display: block; width: 100%; height: auto; }
+  @keyframes atsNode {
+    0%, 100% { r: 3.2; opacity: 0.85; }
+    50%      { r: 4.6; opacity: 1; }
+  }
+  @keyframes atsHalo {
+    0%   { r: 4; opacity: 0.5; }
+    70%  { r: 20; opacity: 0; }
+    100% { r: 20; opacity: 0; }
+  }
+  @keyframes atsRoute { to { stroke-dashoffset: -400; } }
+  .node { animation: atsNode 3.4s ease-in-out infinite; }
+  .halo { animation: atsHalo 3.6s ease-out infinite; }
+  .route { animation: atsRoute 14s linear infinite; }
+</style>
+</head>
+<body>
+<svg id="map" viewBox="0 0 1400 660" preserveAspectRatio="xMidYMid meet" role="img"
+     aria-label="World map showing Aeon Tech Solutions' supply and support network, with routes from its Kolkata head office to markets in Russia, Vietnam, the Philippines, Australia, Denmark, the United Kingdom, Germany, Finland, Indonesia, Bangladesh, Kuwait, Brazil, the United States, South Africa and Ethiopia">
+  <defs>
+    <filter id="atsGlow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="4" result="b" />
+      <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <radialGradient id="atsVignette" cx="0.5" cy="0.5" r="0.72">
+      <stop offset="0.68" stop-color="#0D0F11" stop-opacity="0" />
+      <stop offset="1" stop-color="#0D0F11" stop-opacity="0.5" />
+    </radialGradient>
+  </defs>
+</svg>
+
+<script>
+/* ---------------------------------------------------------------------------
+   Supply & support network. No country is highlighted — the map is a uniform
+   landmass and the message is carried by nodes and routes, so no national
+   boundary is asserted anywhere on the graphic.
+
+   ORIGIN  — head office.
+   NODES   — one entry per market. [longitude, latitude].
+--------------------------------------------------------------------------- */
+const ORIGIN = { name: 'Kolkata, India', at: [88.36, 22.57] };
+
+const NODES = [
+  { name: 'Russia',         at: [37.62,  55.75] },
+  { name: 'Finland',        at: [24.94,  60.17] },
+  { name: 'Denmark',        at: [12.57,  55.68] },
+  { name: 'United Kingdom', at: [-0.13,  51.51] },
+  { name: 'Germany',        at: [ 8.68,  50.11] },
+  { name: 'Kuwait',         at: [47.98,  29.38] },
+  { name: 'Ethiopia',       at: [38.76,   9.03] },
+  { name: 'South Africa',   at: [28.05, -26.20] },
+  { name: 'Bangladesh',     at: [90.41,  23.81] },
+  { name: 'Vietnam',        at: [105.85, 21.03] },
+  { name: 'Philippines',    at: [120.98, 14.60] },
+  { name: 'Indonesia',      at: [106.85, -6.21] },
+  { name: 'Australia',      at: [151.21,-33.87] },
+  { name: 'USA',            at: [-95.37, 29.76] },
+  { name: 'Brazil',         at: [-46.63,-23.55] }
+];
+
+const LAND   = '#232A31';
+const STROKE = 'rgba(255,255,255,0.085)';
+const ACCENT = '#EE6A22';
+
+const W = 1400, H = 660;
+const svg = d3.select('#map');
+
+d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json')
+  .then(topology => {
+    const countries = topojson.feature(topology, topology.objects.countries);
+    const projection = d3.geoNaturalEarth1().fitExtent([[30, 24], [W - 30, H - 24]], countries);
+    const path = d3.geoPath(projection);
+
+    svg.append('path')
+      .attr('d', path(d3.geoGraticule10()))
+      .attr('fill', 'none')
+      .attr('stroke', 'rgba(255,255,255,0.04)')
+      .attr('stroke-width', 1);
+
+    /* India is drawn from the client-supplied Natural Earth 10m outline, whose
+       northern territory the 110m world file omits. Same fill as every other
+       country — nothing is highlighted. */
+    svg.append('g')
+      .selectAll('path')
+      .data(countries.features.filter(d => d.properties.name !== 'India'))
+      .join('path')
+        .attr('d', path)
+        .attr('fill', LAND)
+        .attr('stroke', STROKE)
+        .attr('stroke-width', 0.7);
+
+    const indiaLayer = svg.append('g');
+    d3.json('assets/geo/india.json')
+      .then(india => {
+        indiaLayer.selectAll('path')
+          .data(india.features)
+          .join('path')
+            .attr('d', path)
+            .attr('fill', LAND)
+            .attr('stroke', STROKE)
+            .attr('stroke-width', 0.7);
+      })
+      .catch(err => console.error('India outline unavailable', err));
+
+    /* Great-circle routes, sampled through the projection so the curve is real
+       geography rather than a decorative bezier. */
+    const routes = svg.append('g').attr('filter', 'url(#atsGlow)');
+    NODES.forEach((n, i) => {
+      const interp = d3.geoInterpolate(ORIGIN.at, n.at);
+      const pts = d3.range(0, 1.0001, 1 / 64).map(t => interp(t));
+      routes.append('path')
+        .attr('class', 'route')
+        .attr('d', d3.line()(pts.map(p => projection(p))))
+        .attr('fill', 'none')
+        .attr('stroke', ACCENT)
+        .attr('stroke-width', 1.1)
+        .attr('stroke-opacity', 0.42)
+        .attr('stroke-dasharray', '3 7')
+        .style('animation-delay', (-i * 0.9) + 's');
+    });
+
+    const pins = svg.append('g').attr('filter', 'url(#atsGlow)');
+    NODES.forEach((n, i) => {
+      const [x, y] = projection(n.at);
+      const g = pins.append('g').attr('transform', 'translate(' + x + ',' + y + ')');
+      g.append('title').text(n.name);
+      g.append('circle').attr('class', 'node').attr('r', 3.2).attr('fill', ACCENT)
+        .style('animation-delay', (-i * 0.42) + 's');
+    });
+
+    const [ox, oy] = projection(ORIGIN.at);
+    const og = svg.append('g')
+      .attr('transform', 'translate(' + ox + ',' + oy + ')')
+      .attr('filter', 'url(#atsGlow)');
+    og.append('title').text(ORIGIN.name);
+    og.append('circle').attr('class', 'halo').attr('r', 4).attr('fill', ACCENT);
+    og.append('circle').attr('r', 6).attr('fill', ACCENT)
+      .attr('stroke', '#0D0F11').attr('stroke-width', 2);
+
+    svg.append('rect')
+      .attr('x', 0).attr('y', 0).attr('width', W).attr('height', H)
+      .attr('fill', 'url(#atsVignette)')
+      .attr('pointer-events', 'none');
+  })
+  .catch(err => {
+    svg.append('text').attr('x', W / 2).attr('y', H / 2)
+      .attr('text-anchor', 'middle')
+      .attr('font-family', 'IBM Plex Mono, monospace').attr('font-size', 14)
+      .attr('fill', '#6E747A')
+      .text('Map data unavailable offline');
+    console.error(err);
+  });
+</script>
+</body>
+</html>

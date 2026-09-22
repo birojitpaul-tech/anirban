@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Contact &amp; Request a Quote | Aeon Tech Solutions</title>
+<meta name="description" content="Send a technical requirement or request a quote for ESP spares, cable management systems or bulk material handling equipment. Talk directly to an engineer." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #F5F4F2; -webkit-font-smoothing: antialiased; }
+  a { color: #C9430F; text-decoration: none; }
+  a:hover { color: #EE6A22; }
+  input::placeholder, textarea::placeholder { color: #A5A19C; }
+  input:focus, textarea:focus, select:focus { outline: none; border-color: #EE6A22 !important; }
+</style>
+</helmet>
+
+<div style="font-family: 'IBM Plex Sans', sans-serif; color: #1A1E21; background: #F5F4F2;">
+<dc-import name="SiteHeader" hint-size="100%,84px" style="position: sticky; top: 0; z-index: 900;"></dc-import>
+<dc-import name="FloatingContact" hint-size="220px,170px"></dc-import>
+
+<section data-screen-label="Contact hero" style="background: #0D0F11;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: clamp(56px, 7vw, 92px) clamp(20px, 4vw, 56px) clamp(56px, 7vw, 88px);">
+    <div style="display: flex; gap: 10px; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6E747A; margin-bottom: 42px;">
+      <a href="Home.dc.html" style="color: #6E747A;" style-hover="color: #EE6A22;">Home</a><span>/</span><span style="color: #EE6A22;">Contact</span>
+    </div>
+    <h1 style="margin: 0; max-width: 20ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(38px, 5.4vw, 82px); line-height: 1.0; letter-spacing: -0.035em; color: #FFFFFF;">Talk to an Engineer</h1>
+    <p style="margin: 30px 0 0; max-width: 62ch; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.65; color: #C1C6CA; font-weight: 300;">Send the drawing, the nameplate photograph, the old datasheet, or simply the symptom you are seeing on the plant. We will come back with what we would need to quote it properly.</p>
+  </div>
+</section>
+
+<section id="rfq" data-screen-label="RFQ form" style="background: #F5F4F2; padding: clamp(48px, 6vw, 80px) 0 clamp(72px, 9vw, 120px);">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(36px, 5vw, 72px); align-items: start;">
+
+      <div style="background: #FFFFFF; border: 1px solid #DCD9D4;">
+        <div style="display: flex; border-bottom: 1px solid #DCD9D4;">
+          <sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+            <div style="flex: 1; padding: 20px 18px; border-right: 1px solid #DCD9D4; background: {{ s.bg }};">
+              <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; color: {{ s.numColor }};">{{ s.num }}</span>
+              <span style="display: block; margin-top: 8px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: -0.01em; color: {{ s.fg }};">{{ s.label }}</span>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="padding: clamp(28px, 4vw, 44px); display: {{ step1Display }}; flex-direction: column; gap: 28px;">
+          <div>
+            <h2 style="margin: 0 0 8px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.025em;">What is the requirement?</h2>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D646A;">This routes the enquiry to the right engineer.</p>
+          </div>
+          <div>
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: #9A9EA2; margin-bottom: 12px;">Solution area</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <sc-for list="{{ verticals }}" as="v" hint-placeholder-count="3">
+                <button onClick="{{ v.go }}" style="cursor: pointer; font-family: 'IBM Plex Sans', sans-serif; font-size: 14.5px; padding: 14px 18px; border-radius: 2px; text-align: left; border: 1px solid {{ v.border }}; background: {{ v.bg }}; color: {{ v.fg }};">{{ v.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <div>
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: #9A9EA2; margin-bottom: 12px;">Enquiry type</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <sc-for list="{{ kinds }}" as="k" hint-placeholder-count="4">
+                <button onClick="{{ k.go }}" style="cursor: pointer; font-family: 'IBM Plex Sans', sans-serif; font-size: 14.5px; padding: 14px 18px; border-radius: 2px; border: 1px solid {{ k.border }}; background: {{ k.bg }}; color: {{ k.fg }};">{{ k.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <div>
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: #9A9EA2; margin-bottom: 12px;">Urgency</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <sc-for list="{{ urgencies }}" as="u" hint-placeholder-count="3">
+                <button onClick="{{ u.go }}" style="cursor: pointer; font-family: 'IBM Plex Sans', sans-serif; font-size: 14.5px; padding: 14px 18px; border-radius: 2px; border: 1px solid {{ u.border }}; background: {{ u.bg }}; color: {{ u.fg }};">{{ u.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <button onClick="{{ next }}" style="align-self: flex-start; cursor: pointer; background: #16191C; color: #F5F4F2; border: none; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 18px 30px; border-radius: 2px;" style-hover="background: #EE6A22; color: #0D0F11;">Continue →</button>
+        </div>
+
+        <div style="padding: clamp(28px, 4vw, 44px); display: {{ step2Display }}; flex-direction: column; gap: 26px;">
+          <div>
+            <h2 style="margin: 0 0 8px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.025em;">Equipment &amp; plant detail</h2>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D646A;">Partial information is fine. Anything you leave blank we will ask about.</p>
+          </div>
+          <label style="display: block;">
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: #9A9EA2; margin-bottom: 10px;">Industry / plant type</span>
+            <input type="text" value="{{ f_industry }}" onChange="{{ on_industry }}" placeholder="e.g. Cement — kiln &amp; raw mill" style="width: 100%; box-sizing: border-box; border: 1px solid #C9C5BF; background: #FAF9F7; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21; padding: 15px 16px;" />
+          </label>
+          <label style="display: block;">
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: #9A9EA2; margin-bottom: 10px;">Equipment make / model, if known</span>
+            <input type="text" value="{{ f_equipment }}" onChange="{{ on_equipment }}" placeholder="Nameplate details, original supplier, year" style="width: 100%; box-sizing: border-box; border: 1px solid #C9C5BF; background: #FAF9F7; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21; padding: 15px 16px;" />
+          </label>
+          <label style="display: block;">
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: #9A9EA2; margin-bottom: 10px;">Requirement, or the symptom you are seeing</span>
+            <textarea rows="6" value="{{ f_detail }}" onChange="{{ on_detail }}" placeholder="e.g. Stack reading has risen from 30 to 85 mg/Nm³ over four months. Field 2 trips on low secondary voltage." style="width: 100%; box-sizing: border-box; border: 1px solid #C9C5BF; background: #FAF9F7; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; line-height: 1.6; color: #1A1E21; padding: 15px 16px; resize: vertical;"></textarea>
+          </label>
+          <div style="border: 1px dashed #C9C5BF; background: #FAF9F7; padding: 20px 18px;">
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #9A9EA2; margin-bottom: 8px;">Attachments</span>
+            <span style="display: block; font-size: 14.5px; line-height: 1.6; color: #5D646A;">Drawings, nameplate photographs, old datasheets or previous quotations. File upload requires backend configuration — until then, attachments can be emailed to the address opposite.</span>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <button onClick="{{ back }}" style="cursor: pointer; background: transparent; color: #3A3F44; border: 1px solid #C9C5BF; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 18px 26px; border-radius: 2px;" style-hover="border-color: #16191C;">← Back</button>
+            <button onClick="{{ next }}" style="cursor: pointer; background: #16191C; color: #F5F4F2; border: none; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 18px 30px; border-radius: 2px;" style-hover="background: #EE6A22; color: #0D0F11;">Continue →</button>
+          </div>
+        </div>
+
+        <div style="padding: clamp(28px, 4vw, 44px); display: {{ step3Display }}; flex-direction: column; gap: 26px;">
+          <div>
+            <h2 style="margin: 0 0 8px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.025em;">Where should we reply?</h2>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D646A;">We reply to the engineer, not to a marketing list.</p>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+            <label style="display: block;">
+              <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: #9A9EA2; margin-bottom: 10px;">Name</span>
+              <input type="text" value="{{ f_name }}" onChange="{{ on_name }}" style="width: 100%; box-sizing: border-box; border: 1px solid #C9C5BF; background: #FAF9F7; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21; padding: 15px 16px;" />
+            </label>
+            <label style="display: block;">
+              <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: #9A9EA2; margin-bottom: 10px;">Company</span>
+              <input type="text" value="{{ f_company }}" onChange="{{ on_company }}" style="width: 100%; box-sizing: border-box; border: 1px solid #C9C5BF; background: #FAF9F7; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21; padding: 15px 16px;" />
+            </label>
+            <label style="display: block;">
+              <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: #9A9EA2; margin-bottom: 10px;">Email</span>
+              <input type="email" value="{{ f_email }}" onChange="{{ on_email }}" style="width: 100%; box-sizing: border-box; border: 1px solid #C9C5BF; background: #FAF9F7; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21; padding: 15px 16px;" />
+            </label>
+            <label style="display: block;">
+              <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: #9A9EA2; margin-bottom: 10px;">Phone</span>
+              <input type="tel" value="{{ f_phone }}" onChange="{{ on_phone }}" style="width: 100%; box-sizing: border-box; border: 1px solid #C9C5BF; background: #FAF9F7; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21; padding: 15px 16px;" />
+            </label>
+          </div>
+          <div style="background: #F5F4F2; border: 1px solid #DCD9D4; padding: 22px 20px;">
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #9A9EA2; margin-bottom: 14px;">Summary</span>
+            <span style="display: block; font-size: 15px; line-height: 1.7; color: #3A3F44;">{{ summary }}</span>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <button onClick="{{ back }}" style="cursor: pointer; background: transparent; color: #3A3F44; border: 1px solid #C9C5BF; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 18px 26px; border-radius: 2px;" style-hover="border-color: #16191C;">← Back</button>
+            <button onClick="{{ submit }}" style="cursor: pointer; background: #EE6A22; color: #0D0F11; border: none; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 18px 30px; border-radius: 2px;" style-hover="background: #FF8340;">Submit Requirement →</button>
+          </div>
+        </div>
+
+        <div style="padding: clamp(36px, 5vw, 56px); display: {{ doneDisplay }}; flex-direction: column; gap: 20px;">
+          <span style="display: block; width: 40px; height: 3px; background: #EE6A22;"></span>
+          <h2 style="margin: 0; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -0.03em;">Requirement captured.</h2>
+          <p style="margin: 0; max-width: 52ch; font-size: 16px; line-height: 1.7; color: #3A3F44;">This form is a working prototype — no message has been transmitted yet, because form delivery needs an email endpoint or CRM connection to be configured. Once that is in place, submissions will route straight to the engineering desk.</p>
+          <div style="background: #F5F4F2; border: 1px solid #DCD9D4; padding: 22px 20px;">
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #9A9EA2; margin-bottom: 14px;">Captured</span>
+            <span style="display: block; font-size: 15px; line-height: 1.7; color: #3A3F44;">{{ summary }}</span>
+          </div>
+          <button onClick="{{ reset }}" style="align-self: flex-start; cursor: pointer; background: transparent; color: #C9430F; border: 1px solid #C9C5BF; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 16px 26px; border-radius: 2px;" style-hover="border-color: #EE6A22;">Start Another Enquiry</button>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="background: #16191C; padding: 34px 32px;">
+          <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: #EE6A22; margin-bottom: 18px;">Direct Contact</span>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <a href="tel:+918584060747" style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.03em; color: #F5F4F2;" style-hover="color: #EE6A22;">+91 85840 60747</a>
+            <a href="https://wa.me/918584060747" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: #EE6A22;" style-hover="color: #FF8340;">Message on WhatsApp &rarr;</a>
+            <div style="margin-top: 6px; font-size: 15px; line-height: 1.7; color: #C8CCD0;">Aeon Tech Solutions<br />5/2G/1, Bediadanga 1st Lane<br />Kolkata &ndash; 700039, India</div>
+            <a href="mailto:salesats@aeontechsolutions.com" style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #F5F4F2; word-break: break-all;" style-hover="color: #EE6A22;">salesats@aeontechsolutions.com</a>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #6E747A; border: 1px dashed rgba(255,255,255,0.18); padding: 12px 14px;">[ADD WORKING HOURS]</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px;">
+              <a href="https://wa.me/918584060747" target="_blank" rel="noopener" style="border: 1px solid rgba(255,255,255,0.2); color: #C8CCD0; display: inline-flex; align-items: center; gap: 9px; padding: 9px 14px 9px 11px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;" style-hover="border-color: #EE6A22; color: #EE6A22;"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" style="display:block;flex-shrink:0;"><path d="M12.04 2.5c-5.23 0-9.48 4.24-9.48 9.47 0 1.67.44 3.3 1.27 4.74L2.5 21.5l4.9-1.29a9.45 9.45 0 0 0 4.64 1.2h.01c5.22 0 9.47-4.25 9.47-9.48 0-2.53-.99-4.91-2.78-6.7a9.4 9.4 0 0 0-6.7-2.73zm0 1.6c2.1 0 4.07.82 5.56 2.31a7.83 7.83 0 0 1 2.3 5.56c0 4.34-3.53 7.87-7.87 7.87a7.86 7.86 0 0 1-4.01-1.1l-.29-.17-2.9.76.77-2.84-.18-.3a7.83 7.83 0 0 1-1.2-4.18c0-4.35 3.53-7.88 7.82-7.88z"/><path d="M8.9 7.28c-.18-.4-.36-.41-.53-.42h-.45c-.16 0-.4.06-.61.29-.21.23-.8.79-.8 1.92 0 1.13.82 2.22.94 2.37.12.16 1.6 2.55 3.87 3.48 1.88.77 2.27.62 2.68.58.4-.04 1.31-.53 1.5-1.05.18-.52.18-.96.13-1.05-.06-.09-.21-.15-.45-.27-.23-.12-1.31-.65-1.51-.72-.21-.08-.36-.12-.51.11-.15.24-.58.76-.71.91-.13.16-.26.18-.49.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.14-1.36-1.27-1.6-.13-.23-.01-.36.1-.48.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.53-1.27-.7-1.73z"/></svg><span>WhatsApp</span></a>
+              <span title="[ADD LINKEDIN PROFILE URL]" style="border: 1px dashed rgba(255,255,255,0.2); color: #6E747A; display: inline-flex; align-items: center; gap: 9px; padding: 9px 14px 9px 11px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" style="display:block;flex-shrink:0;"><path d="M4.5 3a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8zM2.9 8.3h3.2V21H2.9zM9.1 8.3h3.1v1.7h.05c.43-.8 1.5-1.65 3.1-1.65 3.3 0 3.9 2.1 3.9 4.9V21h-3.2v-6.3c0-1.5-.03-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21H9.1z"/></svg><span>LinkedIn</span></span>
+              <span title="[ADD INSTAGRAM PROFILE URL]" style="border: 1px dashed rgba(255,255,255,0.2); color: #6E747A; display: inline-flex; align-items: center; gap: 9px; padding: 9px 14px 9px 11px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" style="display:block;flex-shrink:0;"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" stroke="none"/></svg><span>Instagram</span></span>
+              <span title="[ADD FACEBOOK PAGE URL]" style="border: 1px dashed rgba(255,255,255,0.2); color: #6E747A; display: inline-flex; align-items: center; gap: 9px; padding: 9px 14px 9px 11px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" style="display:block;flex-shrink:0;"><path d="M13.9 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.9V13h2.7v8z"/></svg><span>Facebook</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid #DCD9D4; padding: 32px 30px;">
+          <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: #9A9EA2; margin-bottom: 18px;">What Helps Us Quote Faster</span>
+          <div style="display: flex; flex-direction: column; border-top: 1px solid #DCD9D4;">
+            <span style="padding: 14px 0; border-bottom: 1px solid #DCD9D4; font-size: 15px; color: #3A3F44;">Photograph of the component or its nameplate</span>
+            <span style="padding: 14px 0; border-bottom: 1px solid #DCD9D4; font-size: 15px; color: #3A3F44;">Original drawing or datasheet, even if outdated</span>
+            <span style="padding: 14px 0; border-bottom: 1px solid #DCD9D4; font-size: 15px; color: #3A3F44;">Field arrangement and quantity required</span>
+            <span style="padding: 14px 0; border-bottom: 1px solid #DCD9D4; font-size: 15px; color: #3A3F44;">Current stack reading and the applicable limit</span>
+            <span style="padding: 14px 0; border-bottom: 1px solid #DCD9D4; font-size: 15px; color: #3A3F44;">Planned shutdown window, if there is one</span>
+          </div>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid #DCD9D4; padding: 32px 30px;">
+          <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: #9A9EA2; margin-bottom: 14px;">Not a Quote Request?</span>
+          <p style="margin: 0 0 18px; font-size: 15px; line-height: 1.65; color: #3A3F44;">For catalogues, datasheets and technical documents, the Knowledge Centre is the faster route.</p>
+          <a href="Resources.dc.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase;">Open Knowledge Centre →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440}}">
+const VERTS = ['ESP & Air Pollution Control', 'Cable Management', 'Bulk Material Handling'];
+const KINDS = ['Spares supply', 'Retrofit / upgradation', 'Troubleshooting', 'New equipment', 'Technical consultancy'];
+const URG = ['Planned shutdown', 'Within this quarter', 'Urgent / breakdown'];
+const LABELS = ['Requirement', 'Equipment detail', 'Your details'];
+
+class Component extends DCLogic {
+  state = { step: 0, done: false, vert: null, kind: null, urg: null, industry: '', equipment: '', detail: '', name: '', company: '', email: '', phone: '' };
+
+  pick(key, v) { this.setState({ [key]: v }); }
+
+  chip(list, key) {
+    return list.map(label => {
+      const on = this.state[key] === label;
+      return {
+        label,
+        bg: on ? '#16191C' : '#FFFFFF',
+        fg: on ? '#EE6A22' : '#3A3F44',
+        border: on ? '#16191C' : '#C9C5BF',
+        go: () => this.pick(key, label)
+      };
+    });
+  }
+
+  renderVals() {
+    const s = this.state;
+    const parts = [
+      s.vert || 'Solution area not selected',
+      s.kind || 'Enquiry type not selected',
+      s.urg || 'Urgency not selected',
+      s.industry || null,
+      s.equipment || null,
+      s.name ? s.name + (s.company ? ' — ' + s.company : '') : null,
+      s.email || null
+    ].filter(Boolean);
+
+    const bind = key => e => this.setState({ [key]: e.target.value });
+
+    return {
+      steps: LABELS.map((label, i) => ({
+        label, num: '0' + (i + 1),
+        bg: i === s.step && !s.done ? '#F5F4F2' : '#FFFFFF',
+        fg: i === s.step && !s.done ? '#1A1E21' : '#9A9EA2',
+        numColor: i === s.step && !s.done ? '#C9430F' : '#C4C0BB'
+      })),
+      step1Display: !s.done && s.step === 0 ? 'flex' : 'none',
+      step2Display: !s.done && s.step === 1 ? 'flex' : 'none',
+      step3Display: !s.done && s.step === 2 ? 'flex' : 'none',
+      doneDisplay: s.done ? 'flex' : 'none',
+      verticals: this.chip(VERTS, 'vert'),
+      kinds: this.chip(KINDS, 'kind'),
+      urgencies: this.chip(URG, 'urg'),
+      f_industry: s.industry, on_industry: bind('industry'),
+      f_equipment: s.equipment, on_equipment: bind('equipment'),
+      f_detail: s.detail, on_detail: bind('detail'),
+      f_name: s.name, on_name: bind('name'),
+      f_company: s.company, on_company: bind('company'),
+      f_email: s.email, on_email: bind('email'),
+      f_phone: s.phone, on_phone: bind('phone'),
+      summary: parts.join('  ·  '),
+      next: () => this.setState(st => ({ step: Math.min(2, st.step + 1) })),
+      back: () => this.setState(st => ({ step: Math.max(0, st.step - 1) })),
+      submit: () => this.setState({ done: true }),
+      reset: () => this.setState({ step: 0, done: false, vert: null, kind: null, urg: null, industry: '', equipment: '', detail: '', name: '', company: '', email: '', phone: '' })
+    };
+  }
+}
+</script>
+</body>
+</html>

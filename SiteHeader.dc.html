@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  a { color: #EE6A22; text-decoration: none; }
+  a:hover { color: #FF8340; }
+</style>
+</helmet>
+<header style="position: sticky; top: 0; z-index: 900; background: rgba(13,15,17,0.94); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.09); font-family: 'IBM Plex Sans', sans-serif;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px); height: 84px; display: flex; align-items: center; gap: 40px;">
+
+    <a href="Home.dc.html" style="display: flex; align-items: center; gap: 14px; flex-shrink: 0; text-decoration: none;">
+      <img src="assets/logo-transparent.png" alt="Aeon Tech Solutions" style="width: 54px; height: 54px; display: block;" />
+      <span style="display: flex; flex-direction: column; line-height: 1.02;">
+        <span style="font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 16px; letter-spacing: 0.13em; color: #F5F4F2;">AEON TECH</span>
+        <span style="font-family: 'Manrope', sans-serif; font-weight: 500; font-size: 16px; letter-spacing: 0.13em; color: #8C9298;">SOLUTIONS</span>
+      </span>
+    </a>
+
+    <nav style="display: {{ navDisplay }}; align-items: center; gap: 4px; margin-left: auto;">
+      <a href="About.dc.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #C8CCD0; padding: 12px 15px; border-radius: 2px;" style-hover="color: #FFFFFF; background: rgba(255,255,255,0.06);">About ATS</a>
+
+      <div onMouseEnter="{{ openSolutions }}" onMouseLeave="{{ closeMenu }}" style="position: relative;">
+        <a href="ESP.dc.html" style="display: flex; align-items: center; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #C8CCD0; padding: 12px 15px; border-radius: 2px;" style-hover="color: #FFFFFF; background: rgba(255,255,255,0.06);">Solutions <span style="font-size: 8px; color: #EE6A22;">▼</span></a>
+        <div style="position: absolute; top: 100%; left: 0; width: 340px; background: #14181B; border: 1px solid rgba(255,255,255,0.10); border-top: 2px solid #EE6A22; box-shadow: 0 30px 60px rgba(0,0,0,0.55); padding: 10px; display: {{ solutionsDisplay }}; flex-direction: column;">
+          <a href="ESP.dc.html" style="padding: 14px 16px; display: block; border-bottom: 1px solid rgba(255,255,255,0.06);" style-hover="background: rgba(238,106,34,0.10);">
+            <span style="display: block; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 14px; color: #F5F4F2; letter-spacing: 0.01em;">ESP &amp; Air Pollution Control</span>
+            <span style="display: block; font-size: 12.5px; color: #8C9298; margin-top: 4px;">Spares, electricals, retrofit, services</span>
+          </a>
+          <a href="ESPRetrofit.dc.html" style="padding: 14px 16px; display: block; border-bottom: 1px solid rgba(255,255,255,0.06);" style-hover="background: rgba(238,106,34,0.10);">
+            <span style="display: block; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 14px; color: #F5F4F2; letter-spacing: 0.01em;">ESP Performance Enhancement &amp; Retrofit</span>
+            <span style="display: block; font-size: 12.5px; color: #8C9298; margin-top: 4px;">Diagnose, upgrade, verify</span>
+          </a>
+          <a href="CableManagement.dc.html" style="padding: 14px 16px; display: block; border-bottom: 1px solid rgba(255,255,255,0.06);" style-hover="background: rgba(238,106,34,0.10);">
+            <span style="display: block; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 14px; color: #F5F4F2;">Cable Management Solutions</span>
+            <span style="display: block; font-size: 12.5px; color: #8C9298; margin-top: 4px;">Wire mesh cable tray systems</span>
+          </a>
+          <a href="MaterialHandling.dc.html" style="padding: 14px 16px; display: block; border-bottom: 1px solid rgba(255,255,255,0.06);" style-hover="background: rgba(238,106,34,0.10);">
+            <span style="display: block; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 14px; color: #F5F4F2;">Bulk Material Handling</span>
+            <span style="display: block; font-size: 12.5px; color: #8C9298; margin-top: 4px;">Bagging, conveying, truck loading</span>
+          </a>
+          <a href="ITInfrastructure.dc.html" style="padding: 14px 16px; display: block;" style-hover="background: rgba(238,106,34,0.10);">
+            <span style="display: block; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 14px; color: #F5F4F2;">IT Infrastructure &amp; Consulting</span>
+            <span style="display: block; font-size: 12.5px; color: #8C9298; margin-top: 4px;">Advisory on networks, data centres, security, command centres</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="Industries.dc.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #C8CCD0; padding: 12px 15px; border-radius: 2px;" style-hover="color: #FFFFFF; background: rgba(255,255,255,0.06);">Industries</a>
+      <a href="Products.dc.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #C8CCD0; padding: 12px 15px; border-radius: 2px;" style-hover="color: #FFFFFF; background: rgba(255,255,255,0.06);">Products</a>
+
+      <div onMouseEnter="{{ openResources }}" onMouseLeave="{{ closeMenu }}" style="position: relative;">
+        <a href="Resources.dc.html" style="display: flex; align-items: center; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #C8CCD0; padding: 12px 15px; border-radius: 2px;" style-hover="color: #FFFFFF; background: rgba(255,255,255,0.06);">Resources <span style="font-size: 8px; color: #EE6A22;">▼</span></a>
+        <div style="position: absolute; top: 100%; right: 0; width: 300px; background: #14181B; border: 1px solid rgba(255,255,255,0.10); border-top: 2px solid #EE6A22; box-shadow: 0 30px 60px rgba(0,0,0,0.55); padding: 10px; display: {{ resourcesDisplay }}; flex-direction: column;">
+          <a href="Resources.dc.html#catalogues" style="padding: 11px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 13.5px; color: #E2E5E7; display: block;" style-hover="background: rgba(238,106,34,0.10);">Product Catalogues</a>
+          <a href="Resources.dc.html#datasheets" style="padding: 11px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 13.5px; color: #E2E5E7; display: block;" style-hover="background: rgba(238,106,34,0.10);">Technical Datasheets</a>
+          <a href="Resources.dc.html#papers" style="padding: 11px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 13.5px; color: #E2E5E7; display: block;" style-hover="background: rgba(238,106,34,0.10);">Technical Papers</a>
+          <a href="Resources.dc.html#articles" style="padding: 11px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 13.5px; color: #E2E5E7; display: block;" style-hover="background: rgba(238,106,34,0.10);">Articles &amp; Insights</a>
+          <a href="Resources.dc.html#cases" style="padding: 11px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 13.5px; color: #E2E5E7; display: block;" style-hover="background: rgba(238,106,34,0.10);">Case Studies</a>
+        </div>
+      </div>
+
+      <a href="Contact.dc.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #C8CCD0; padding: 12px 15px; border-radius: 2px;" style-hover="color: #FFFFFF; background: rgba(255,255,255,0.06);">Contact</a>
+    </nav>
+
+    <a href="Contact.dc.html#rfq" style="display: {{ ctaDisplay }}; align-items: center; gap: 10px; margin-left: 12px; flex-shrink: 0; background: #EE6A22; color: #0D0F11; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 15px 22px; border-radius: 2px;" style-hover="background: #FF8340; color: #0D0F11;">Request a Quote</a>
+
+    <button onClick="{{ toggleMobile }}" aria-label="Menu" style="display: {{ burgerDisplay }}; margin-left: auto; flex-direction: column; justify-content: center; gap: 5px; width: 48px; height: 48px; background: transparent; border: 1px solid rgba(255,255,255,0.18); border-radius: 2px; cursor: pointer; align-items: center;">
+      <span style="display: block; width: 20px; height: 1.5px; background: #F5F4F2;"></span>
+      <span style="display: block; width: 20px; height: 1.5px; background: #F5F4F2;"></span>
+      <span style="display: block; width: 20px; height: 1.5px; background: #F5F4F2;"></span>
+    </button>
+  </div>
+
+  <div style="display: {{ mobilePanelDisplay }}; flex-direction: column; border-top: 1px solid rgba(255,255,255,0.09); background: #0D0F11; padding: 12px clamp(20px, 4vw, 56px) 32px;">
+    <a href="About.dc.html" style="padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 17px; color: #F5F4F2;">About ATS</a>
+    <a href="ESP.dc.html" style="padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 17px; color: #F5F4F2;">ESP &amp; Air Pollution Control</a>
+    <a href="ESPRetrofit.dc.html" style="padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 17px; color: #F5F4F2;">ESP Retrofit &amp; Performance</a>
+    <a href="CableManagement.dc.html" style="padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 17px; color: #F5F4F2;">Cable Management</a>
+    <a href="MaterialHandling.dc.html" style="padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 17px; color: #F5F4F2;">Bulk Material Handling</a>
+    <a href="ITInfrastructure.dc.html" style="padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 17px; color: #F5F4F2;">IT Infrastructure &amp; Consulting</a>
+    <a href="Industries.dc.html" style="padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 17px; color: #F5F4F2;">Industries</a>
+    <a href="Products.dc.html" style="padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 17px; color: #F5F4F2;">Products</a>
+    <a href="Resources.dc.html" style="padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 17px; color: #F5F4F2;">Resources &amp; Knowledge Centre</a>
+    <a href="Contact.dc.html" style="padding: 16px 0; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 17px; color: #F5F4F2;">Contact</a>
+    <a href="Contact.dc.html#rfq" style="margin-top: 20px; text-align: center; background: #EE6A22; color: #0D0F11; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 18px 22px; border-radius: 2px;">Request a Quote</a>
+  </div>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:84}}">
+class Component extends DCLogic {
+  state = { menu: null, mobileOpen: false, isMobile: false };
+
+  componentDidMount() {
+    this.mq = window.matchMedia('(max-width: 1180px)');
+    this.sync = () => this.setState({ isMobile: this.mq.matches });
+    this.sync();
+    this.mq.addEventListener('change', this.sync);
+  }
+  componentWillUnmount() { if (this.mq) this.mq.removeEventListener('change', this.sync); }
+
+  renderVals() {
+    const m = this.state.isMobile;
+    return {
+      navDisplay: m ? 'none' : 'flex',
+      ctaDisplay: m ? 'none' : 'inline-flex',
+      burgerDisplay: m ? 'flex' : 'none',
+      mobilePanelDisplay: m && this.state.mobileOpen ? 'flex' : 'none',
+      solutionsDisplay: this.state.menu === 'solutions' ? 'flex' : 'none',
+      resourcesDisplay: this.state.menu === 'resources' ? 'flex' : 'none',
+      openSolutions: () => this.setState({ menu: 'solutions' }),
+      openResources: () => this.setState({ menu: 'resources' }),
+      closeMenu: () => this.setState({ menu: null }),
+      toggleMobile: () => this.setState(s => ({ mobileOpen: !s.mobileOpen }))
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>IT Infrastructure Consulting &amp; Technology Advisory | Aeon Tech Solutions</title>
+<meta name="description" content="Aeon Tech Solutions advises on IT infrastructure, networking, security, data centre, surveillance and command &amp; control requirements — independent technology consulting for enterprise, public-sector and institutional projects." />
+<meta name="keywords" content="IT infrastructure consulting, IT infrastructure consultant, technology advisory services, IT infrastructure solutions, network infrastructure consulting, data centre solutions, CCTV and surveillance solutions, command and control centre solutions, cybersecurity infrastructure, smart city technology solutions, traffic management systems, enterprise IT infrastructure, technology solutions provider" />
+<meta property="og:title" content="IT Infrastructure Consulting &amp; Technology Advisory | Aeon Tech Solutions" />
+<meta property="og:description" content="From requirement to architecture — independent advice on connected, secure and intelligent technology." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #F5F4F2; -webkit-font-smoothing: antialiased; }
+  a { color: #C9430F; text-decoration: none; }
+  a:hover { color: #EE6A22; }
+  @keyframes it-flow { to { stroke-dashoffset: -36; } }
+  @keyframes it-flow-slow { to { stroke-dashoffset: -120; } }
+  @keyframes it-pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+  @keyframes it-blink { 0%, 40% { opacity: 0.25; } 55% { opacity: 1; } 100% { opacity: 0.25; } }
+  @keyframes it-scan { 0% { transform: translateX(0); } 100% { transform: translateX(240px); } }
+  @keyframes it-ride { 0% { opacity: 0; } 6% { opacity: 1; } 94% { opacity: 1; } 100% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { [data-anim] { animation: none !important; } }
+</style>
+</helmet>
+
+<div style="font-family: 'IBM Plex Sans', sans-serif; color: #1A1E21; background: #F5F4F2;">
+<dc-import name="SiteHeader" hint-size="100%,84px" style="position: sticky; top: 0; z-index: 900;"></dc-import>
+<dc-import name="FloatingContact" hint-size="220px,170px"></dc-import>
+
+<section data-screen-label="IT infra hero" style="position: relative; background: #0A1220; overflow: hidden;">
+  <div style="position: absolute; inset: 0; background: radial-gradient(120% 90% at 78% 20%, rgba(46,86,140,0.42) 0%, rgba(10,18,32,0) 62%);"></div>
+  <div style="position: relative; max-width: 1560px; margin: 0 auto; padding: clamp(56px, 7vw, 92px) clamp(20px, 4vw, 56px) clamp(56px, 7vw, 96px);">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 26px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6E7B8C;">
+      <a href="Home.dc.html" style="color: #8C99A8;">Home</a><span>/</span><a href="Products.dc.html" style="color: #8C99A8;">Products &amp; Services</a><span>/</span><span style="color: #C7D0DA;">IT Infrastructure &amp; Technology Consulting</span>
+    </div>
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #EE6A22; margin-bottom: 22px;">Vertical 04</span>
+    <h1 style="margin: 0; max-width: 24ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(32px, 4.6vw, 70px); line-height: 1.01; letter-spacing: -0.035em; color: #FFFFFF;">IT Infrastructure Business Solutions</h1>
+    <p style="margin: 24px 0 0; max-width: 40ch; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: clamp(17px, 1.6vw, 24px); line-height: 1.28; letter-spacing: -0.02em; color: #EE6A22;">Independent advice. Right-sized architecture. Technology that fits.</p>
+    <p style="margin: 24px 0 0; max-width: 64ch; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.65; color: #C7D0DA; font-weight: 300;">Advising enterprises, institutions, public-sector organizations and mission-critical environments on the technology infrastructure they should build — and how it should fit together.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 1px; margin-top: 34px; max-width: 780px;">
+      <span style="background: rgba(255,255,255,0.05); box-shadow: 0 0 0 1px rgba(255,255,255,0.12); padding: 14px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #C7D0DA;">Hardware</span>
+      <span style="background: rgba(255,255,255,0.05); box-shadow: 0 0 0 1px rgba(255,255,255,0.12); padding: 14px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #C7D0DA;">Software</span>
+      <span style="background: rgba(255,255,255,0.05); box-shadow: 0 0 0 1px rgba(255,255,255,0.12); padding: 14px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #C7D0DA;">Networking</span>
+      <span style="background: rgba(255,255,255,0.05); box-shadow: 0 0 0 1px rgba(255,255,255,0.12); padding: 14px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #C7D0DA;">Security</span>
+      <span style="background: rgba(238,106,34,0.14); box-shadow: 0 0 0 1px rgba(238,106,34,0.5); padding: 14px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #EE6A22;">Advisory</span>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px;">
+      <a href="#solutions" style="display: inline-flex; align-items: center; gap: 10px; background: #C9430F; color: #FFFFFF; padding: 17px 26px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;" style-hover="background: #EE6A22;">Explore IT solutions →</a>
+      <a href="#enquiry" style="display: inline-flex; align-items: center; gap: 10px; background: transparent; color: #FFFFFF; padding: 17px 26px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.32); font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;" style-hover="box-shadow: inset 0 0 0 1px #EE6A22; color: #EE6A22;">Discuss your project</a>
+    </div>
+
+    <div style="margin-top: clamp(40px, 5vw, 64px); background: rgba(255,255,255,0.03); box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: clamp(18px, 2.4vw, 34px);">
+      <svg viewBox="0 0 1560 380" style="width: 100%; height: auto; display: block;" role="img" aria-label="Technology chain from infrastructure through connectivity, security and intelligence to operations, with data flowing between the layers">
+        <g stroke="#2E4560" stroke-width="1.2" fill="none">
+          <path d="M0 300 H1560" stroke="#28394F" />
+        </g>
+        <g fill="none" stroke="#4C7FB5" stroke-width="1.6">
+          <path d="M120 128 H1440" stroke="#25384E" />
+          <path data-anim d="M120 128 H1440" stroke="#5B9BD5" stroke-dasharray="16 20" style="animation: it-flow-slow 4s infinite linear;" />
+        </g>
+        <g font-family="'IBM Plex Mono', monospace" font-size="13" letter-spacing="1.2">
+          <g fill="none" stroke="#3A5573" stroke-width="1.6">
+            <path d="M64 196 H304 V276 H64 Z" /><path d="M348 196 H588 V276 H348 Z" /><path d="M632 196 H872 V276 H632 Z" /><path d="M916 196 H1156 V276 H916 Z" /><path d="M1200 196 H1440 V276 H1200 Z" />
+          </g>
+          <circle data-anim cx="184" cy="128" r="9" fill="#5B9BD5" style="animation: it-pulse 3.2s infinite ease-in-out;" />
+          <circle data-anim cx="468" cy="128" r="9" fill="#5B9BD5" style="animation: it-pulse 3.2s infinite ease-in-out; animation-delay: 0.5s;" />
+          <circle data-anim cx="752" cy="128" r="9" fill="#EE6A22" style="animation: it-pulse 3.2s infinite ease-in-out; animation-delay: 1s;" />
+          <circle data-anim cx="1036" cy="128" r="9" fill="#5B9BD5" style="animation: it-pulse 3.2s infinite ease-in-out; animation-delay: 1.5s;" />
+          <circle data-anim cx="1320" cy="128" r="9" fill="#5B9BD5" style="animation: it-pulse 3.2s infinite ease-in-out; animation-delay: 2s;" />
+          <g stroke="#3A5573" stroke-width="1.2" fill="none">
+            <path d="M184 137 V196 M468 137 V196 M752 137 V196 M1036 137 V196 M1320 137 V196" />
+          </g>
+          <text x="88" y="232" fill="#C7D0DA">INFRASTRUCTURE</text>
+          <text x="88" y="256" fill="#6E7B8C" font-size="11.5">Servers · storage · racks</text>
+          <text x="372" y="232" fill="#C7D0DA">CONNECTIVITY</text>
+          <text x="372" y="256" fill="#6E7B8C" font-size="11.5">LAN · WAN · fibre · wireless</text>
+          <text x="656" y="232" fill="#EE6A22">SECURITY</text>
+          <text x="656" y="256" fill="#6E7B8C" font-size="11.5">Network · access · surveillance</text>
+          <text x="940" y="232" fill="#C7D0DA">INTELLIGENCE</text>
+          <text x="940" y="256" fill="#6E7B8C" font-size="11.5">Monitoring · analytics · data</text>
+          <text x="1224" y="232" fill="#C7D0DA">OPERATIONS</text>
+          <text x="1224" y="256" fill="#6E7B8C" font-size="11.5">Command · control · response</text>
+          <text x="64" y="96" fill="#8C99A8" font-size="12">FIELD DEVICES</text>
+          <text x="640" y="96" fill="#8C99A8" font-size="12">DATA CENTRE</text>
+          <text x="1240" y="96" fill="#8C99A8" font-size="12">DECISION MAKERS</text>
+          <text x="64" y="336" fill="#6E7B8C" font-size="11.5">ONE COHERENT ARCHITECTURE — ASSESSED, SPECIFIED AND REVIEWED AS A WHOLE</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Why integrated" style="background: #FFFFFF; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(32px, 4vw, 72px); align-items: start;">
+      <div>
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">Why integrated IT infrastructure</span>
+        <h2 style="margin: 0; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em;">Isolated systems are no longer the way organizations run.</h2>
+      </div>
+      <div>
+        <p style="margin: 0 0 18px; font-size: 16.5px; line-height: 1.72; color: #3A3F44;">Modern technology environments are no longer built around isolated systems. Networks, servers, security, surveillance, communication, data and operational systems increasingly need to work together.</p>
+        <p style="margin: 0 0 18px; font-size: 16.5px; line-height: 1.72; color: #3A3F44;">Aeon Tech Solutions works as a technology consultant across these layers — assessing what is in place, defining what the requirement actually calls for, and specifying how the parts should work together before anything is procured.</p>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #5D646A;">The same engineering habit we apply to industrial plant — understand the installation first, then define the scope — applies here: the architecture is drawn from the operating requirement, not from a product catalogue, and not from whatever a vendor is selling.</p>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; margin-top: clamp(40px, 5vw, 64px);">
+      <sc-for list="{{ needs }}" as="n" hint-placeholder-count="12">
+        <span style="background: #FFFFFF; box-shadow: 0 0 0 1px #DCD9D4; padding: 22px 22px; font-size: 15px;">{{ n.v }}</span>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Ecosystem" style="background: #0A1220; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #EE6A22; margin-bottom: 20px;">Our IT infrastructure ecosystem</span>
+    <h2 style="margin: 0 0 18px; max-width: 26ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.6vw, 50px); line-height: 1.03; letter-spacing: -0.03em; color: #FFFFFF;">Five technology pillars, one advisory view across them.</h2>
+    <p style="margin: 0 0 44px; max-width: 62ch; font-size: 16.5px; line-height: 1.7; color: #8C99A8; font-weight: 300;">Hardware, networking, security, data and integration design are the layers every technology project is assembled from. Aeon's role is to look across all five and advise on how they should meet.</p>
+    <div style="background: rgba(255,255,255,0.03); box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: clamp(18px, 2.4vw, 34px); margin-bottom: 28px;">
+      <svg viewBox="0 0 1200 460" style="width: 100%; height: auto; display: block;" role="img" aria-label="Five technology pillars connected to Aeon technology consulting at the centre">
+        <g fill="none" stroke="#25384E" stroke-width="1.4">
+          <circle cx="600" cy="230" r="176" stroke-dasharray="5 8" />
+        </g>
+        <g fill="none" stroke="#5B9BD5" stroke-width="1.6">
+          <path data-anim d="M520 194 L328 108" stroke-dasharray="10 8" style="animation: it-flow 1.6s infinite linear;" />
+          <path data-anim d="M680 194 L872 108" stroke-dasharray="10 8" style="animation: it-flow 1.6s infinite linear; animation-delay: 0.3s;" />
+          <path data-anim d="M516 268 L312 356" stroke-dasharray="10 8" style="animation: it-flow 1.6s infinite linear; animation-delay: 0.6s;" />
+          <path data-anim d="M684 268 L888 356" stroke-dasharray="10 8" style="animation: it-flow 1.6s infinite linear; animation-delay: 0.9s;" />
+          <path data-anim d="M600 326 V400" stroke-dasharray="10 8" style="animation: it-flow 1.6s infinite linear; animation-delay: 1.2s;" />
+        </g>
+        <circle cx="600" cy="230" r="96" fill="#111C2A" stroke="#EE6A22" stroke-width="1.8" />
+        <g font-family="'IBM Plex Mono', monospace" text-anchor="middle">
+          <text x="600" y="218" font-size="14" fill="#EE6A22" letter-spacing="1.4">AEON</text>
+          <text x="600" y="242" font-size="12.5" fill="#C7D0DA" letter-spacing="1">TECHNOLOGY</text>
+          <text x="600" y="262" font-size="12.5" fill="#C7D0DA" letter-spacing="1">CONSULTING</text>
+        </g>
+        <g font-family="'IBM Plex Mono', monospace" font-size="13" letter-spacing="1.1" fill="#C7D0DA">
+          <g fill="none" stroke="#3A5573" stroke-width="1.6">
+            <path d="M56 56 H328 V116 H56 Z" /><path d="M872 56 H1144 V116 H872 Z" /><path d="M40 344 H312 V404 H40 Z" /><path d="M888 344 H1160 V404 H888 Z" /><path d="M464 400 H736 V456 H464 Z" />
+          </g>
+          <text x="76" y="82" fill="#6E7B8C" font-size="11">01</text><text x="76" y="104">IT HARDWARE</text>
+          <text x="892" y="82" fill="#6E7B8C" font-size="11">02</text><text x="892" y="104">NETWORKING &amp; CONNECTIVITY</text>
+          <text x="60" y="370" fill="#6E7B8C" font-size="11">03</text><text x="60" y="392">SECURITY SYSTEMS</text>
+          <text x="908" y="370" fill="#6E7B8C" font-size="11">04</text><text x="908" y="392">DATA &amp; COMPUTING</text>
+          <text x="484" y="426" fill="#6E7B8C" font-size="11">05</text><text x="484" y="446">INTEGRATION DESIGN</text>
+        </g>
+      </svg>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px;">
+      <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="5">
+        <div style="background: #111C2A; box-shadow: 0 0 0 1px rgba(255,255,255,0.09); padding: 32px 28px;">
+          <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #EE6A22;">{{ p.n }}</span>
+          <h3 style="margin: 14px 0 16px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em; color: #FFFFFF;">{{ p.name }}</h3>
+          <span style="display: flex; flex-direction: column; gap: 8px;">
+            <sc-for list="{{ p.items }}" as="i" hint-placeholder-count="8">
+              <span style="font-size: 14.5px; line-height: 1.5; color: #A8B3C0;">{{ i.v }}</span>
+            </sc-for>
+          </span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="solutions" data-screen-label="Solutions we deliver" style="background: #F5F4F2; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">Solutions we deliver</span>
+    <h2 style="margin: 0 0 18px; max-width: 26ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em;">Key business domains.</h2>
+    <p style="margin: 0 0 44px; max-width: 62ch; font-size: 15.5px; line-height: 1.7; color: #5D646A;">Our technology solution portfolio can address the domains below. Scope for any individual project is confirmed against the requirement, the technology partners involved and the site conditions.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px;">
+      <sc-for list="{{ domains }}" as="d" hint-placeholder-count="11">
+        <div style="background: #FFFFFF; box-shadow: 0 0 0 1px #DCD9D4; padding: 32px 28px 34px;" style-hover="background: #FFFFFF; box-shadow: 0 0 0 1px #C9430F;">
+          <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #C9430F;">{{ d.n }}</span>
+          <h3 style="margin: 14px 0 12px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em;">{{ d.name }}</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #5D646A;">{{ d.v }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Sectors" style="background: #FFFFFF; border-top: 1px solid #DCD9D4; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">Sectors &amp; organizations we support</span>
+    <h2 style="margin: 0 0 18px; max-width: 26ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em;">Where these solutions apply.</h2>
+    <p style="margin: 0 0 40px; max-width: 62ch; font-size: 15.5px; line-height: 1.7; color: #5D646A;">Sectors our technology solutions are structured for. Empanelment, approvals and sector-specific credentials are stated only where they have been formally established.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px;">
+      <sc-for list="{{ sectors }}" as="s" hint-placeholder-count="12">
+        <span style="background: #FFFFFF; box-shadow: 0 0 0 1px #DCD9D4; padding: 24px 26px; font-size: 15.5px;">{{ s.v }}</span>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+
+<section id="integration" data-screen-label="Consultant role" style="background: #0A1220; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #EE6A22; margin-bottom: 20px;">Aeon as your technology consultant</span>
+    <h2 style="margin: 0 0 22px; max-width: 24ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(30px, 4.2vw, 60px); line-height: 1.01; letter-spacing: -0.035em; color: #FFFFFF;">More than products. We advise on the whole solution.</h2>
+    <p style="margin: 0 0 14px; max-width: 60ch; font-size: 17px; line-height: 1.68; color: #C7D0DA; font-weight: 300;">We don't just supply technology. We help you decide what to build, and why.</p>
+    <p style="margin: 0 0 44px; max-width: 62ch; font-size: 16px; line-height: 1.7; color: #8C99A8; font-weight: 300;">On a multi-technology project the customer is usually left reconciling a long list of parties, each advocating for its own part and none accountable for the whole. Aeon's role is to sit on the customer's side of that table: assess the requirement, define the architecture, and review what the ecosystem proposes against it.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1px; margin-bottom: clamp(36px, 4vw, 56px);">
+      <sc-for list="{{ coordinate }}" as="c" hint-placeholder-count="9">
+        <span style="background: rgba(255,255,255,0.03); box-shadow: 0 0 0 1px rgba(255,255,255,0.09); padding: 18px 18px; font-size: 14.5px; color: #A8B3C0;">{{ c.v }}</span>
+      </sc-for>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(196px, 1fr)); gap: 14px;">
+      <sc-for list="{{ siChain }}" as="s" hint-placeholder-count="7">
+        <div style="background: #111C2A; box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: 24px 22px 26px; display: flex; flex-direction: column; gap: 12px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; color: #EE6A22;">{{ s.n }}</span>
+          <span style="font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 16.5px; line-height: 1.24; letter-spacing: -0.02em; color: #FFFFFF;">{{ s.name }}</span>
+          <span style="font-size: 14px; line-height: 1.58; color: #8C99A8;">{{ s.v }}</span>
+          <svg viewBox="0 0 120 12" style="width: 58px; height: 12px; display: block; margin-top: auto;" aria-hidden="true">
+            <path data-anim d="M0 6 H110" stroke="#5B9BD5" stroke-width="2" stroke-dasharray="9 6" style="animation: it-flow 1.2s infinite linear;" />
+            <path d="M106 1 L118 6 L106 11" fill="none" stroke="#5B9BD5" stroke-width="2" />
+          </svg>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Pre-bid" style="background: #FFFFFF; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">From opportunity to project</span>
+    <h2 style="margin: 0 0 18px; max-width: 26ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em;">Supporting the solution journey before execution begins.</h2>
+    <p style="margin: 0 0 44px; max-width: 62ch; font-size: 15.5px; line-height: 1.7; color: #5D646A;">The work that decides whether a technology project is buildable happens before the contract. Aeon's involvement at this stage is project-specific — not every function below applies to every engagement.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px;">
+      <sc-for list="{{ prebid }}" as="p" hint-placeholder-count="6">
+        <div style="background: #FFFFFF; box-shadow: 0 0 0 1px #DCD9D4; padding: 32px 28px;">
+          <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #C9430F;">{{ p.n }}</span>
+          <h3 style="margin: 14px 0 12px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.02em;">{{ p.name }}</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #5D646A;">{{ p.v }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Post-bid" style="background: #F5F4F2; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">From contract to completion</span>
+    <h2 style="margin: 0 0 18px; max-width: 26ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em;">Coordination, documentation, delivery.</h2>
+    <p style="margin: 0 0 44px; max-width: 62ch; font-size: 15.5px; line-height: 1.7; color: #5D646A;">Execution discipline is what separates a working system from a pile of delivered equipment: a planned sequence, documented milestones, partners held to the specification and a clean handover. Aeon's role here is oversight on the customer's behalf.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1px;">
+      <sc-for list="{{ postbid }}" as="p" hint-placeholder-count="8">
+        <div style="background: #FFFFFF; box-shadow: 0 0 0 1px #DCD9D4; padding: 26px 22px 28px;">
+          <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; color: #C9430F;">{{ p.n }}</span>
+          <span style="display: block; margin-top: 12px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 16.5px; line-height: 1.24; letter-spacing: -0.02em;">{{ p.name }}</span>
+          <svg viewBox="0 0 120 12" style="width: 54px; height: 12px; display: block; margin-top: 16px;" aria-hidden="true">
+            <path data-anim d="M0 6 H110" stroke="#C9430F" stroke-width="2" stroke-dasharray="9 6" style="animation: it-flow 1.2s infinite linear;" />
+            <path d="M106 1 L118 6 L106 11" fill="none" stroke="#C9430F" stroke-width="2" />
+          </svg>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Products and technologies" style="background: #FFFFFF; border-top: 1px solid #DCD9D4; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">Products &amp; technologies we can integrate</span>
+    <h2 style="margin: 0 0 18px; max-width: 26ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em;">The technology layers we bring together.</h2>
+    <p style="margin: 0 0 44px; max-width: 62ch; font-size: 15.5px; line-height: 1.7; color: #5D646A;">Products are selected per project against the specification and the approved make list. <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #9A9EA2; border: 1px dashed #C9C5BF; padding: 5px 8px;">[ADD OEM PARTNER]</span></p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px;">
+      <sc-for list="{{ products }}" as="p" hint-placeholder-count="11">
+        <div style="background: #FFFFFF; box-shadow: 0 0 0 1px #DCD9D4; padding: 28px 24px 30px;" style-hover="box-shadow: 0 0 0 1px #C9430F;">
+          <h3 style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #C9430F;">{{ p.name }}</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #5D646A;">{{ p.v }}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 32px;">
+      <figure style="margin: 0;">
+        <img src="assets/img/it-vc-room.jpg" alt="Conference room with a large format display and video conferencing equipment integrated into the table" style="width: 100%; height: 280px; object-fit: cover; display: block; border: 1px solid #DCD9D4;" />
+        <figcaption style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #8A8580;">Conference room AV and video conferencing</figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <img src="assets/img/it-ctrl-desk.jpg" alt="Operator position with a monitoring application and a multi-camera CCTV view on wall mounted displays" style="width: 100%; height: 280px; object-fit: cover; display: block; border: 1px solid #DCD9D4;" />
+        <figcaption style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #8A8580;">Operator position — monitoring and CCTV views</figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <img src="assets/img/it-panels.jpg" alt="Wall mounted fire detection and system panels beside the operator desk and display wall" style="width: 100%; height: 280px; object-fit: cover; display: block; border: 1px solid #DCD9D4;" />
+        <figcaption style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #8A8580;">Detection and system panels in the control room</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="One partner" style="background: #111C2A; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #EE6A22; margin-bottom: 20px;">One partner</span>
+    <h2 style="margin: 0 0 18px; max-width: 28ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.6vw, 50px); line-height: 1.03; letter-spacing: -0.03em; color: #FFFFFF;">One advisor. Multiple technologies. One coherent solution.</h2>
+    <p style="margin: 0 0 44px; max-width: 62ch; font-size: 16.5px; line-height: 1.7; color: #A8B3C0; font-weight: 300;">From defining the requirement through architecture, specification and implementation oversight, Aeon can provide a structured advisory approach tailored to the project.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px;">
+      <span style="background: rgba(238,106,34,0.14); box-shadow: 0 0 0 1px rgba(238,106,34,0.5); padding: 26px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #EE6A22;">Consult</span>
+      <span style="background: rgba(255,255,255,0.04); box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: 26px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #C7D0DA;">Design</span>
+      <span style="background: rgba(255,255,255,0.04); box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: 26px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #C7D0DA;">Source</span>
+      <span style="background: rgba(255,255,255,0.04); box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: 26px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #C7D0DA;">Integrate</span>
+      <span style="background: rgba(255,255,255,0.04); box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: 26px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #C7D0DA;">Deploy</span>
+      <span style="background: rgba(255,255,255,0.04); box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: 26px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #C7D0DA;">Commission</span>
+      <span style="background: rgba(255,255,255,0.04); box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: 26px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #C7D0DA;">Support</span>
+    </div>
+    <p style="margin: 22px 0 0; font-size: 14.5px; line-height: 1.68; color: #6E7B8C;">Aeon's scope is defined against the part of the chain the customer needs covered — advisory alone, or advisory extended through sourcing and implementation oversight where the project supports it.</p>
+  </div>
+</section>
+
+<section data-screen-label="Smart technology" style="background: #F5F4F2; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(32px, 4vw, 64px); align-items: center;">
+      <div>
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">Smart technology, smart governance</span>
+        <h2 style="margin: 0 0 20px; max-width: 24ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.6vw, 48px); line-height: 1.03; letter-spacing: -0.03em;">Smart technology for smarter operations.</h2>
+        <p style="margin: 0 0 26px; max-width: 54ch; font-size: 16.5px; line-height: 1.72; color: #3A3F44;">Technology solutions for the environments where public services, safety and urban infrastructure meet — configured to what the organization actually operates.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <sc-for list="{{ smart }}" as="s" hint-placeholder-count="10">
+            <span style="background: #FFFFFF; border: 1px solid #DCD9D4; padding: 11px 15px; font-size: 14.5px;">{{ s.v }}</span>
+          </sc-for>
+        </div>
+      </div>
+      <figure style="margin: 0;">
+        <img src="assets/img/it-ccc-wide.jpg" alt="Integrated command and control centre with a curved video wall showing city maps and camera feeds above operator consoles" style="width: 100%; height: clamp(300px, 36vw, 480px); object-fit: cover; display: block; border: 1px solid #DCD9D4;" />
+        <figcaption style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #8A8580;">Integrated command and control environment</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Command centre" style="background: #0A1220; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #EE6A22; margin-bottom: 20px;">Command &amp; control centres</span>
+    <h2 style="margin: 0 0 18px; max-width: 26ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.6vw, 50px); line-height: 1.03; letter-spacing: -0.03em; color: #FFFFFF;">Where every system arrives in one room.</h2>
+    <p style="margin: 0 0 40px; max-width: 62ch; font-size: 16.5px; line-height: 1.7; color: #8C99A8; font-weight: 300;">A command centre is the clearest test of integration: video wall, camera feeds, maps, network status, communication and operator positions all have to behave as one environment.</p>
+    <div style="background: rgba(255,255,255,0.03); box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: clamp(18px, 2.4vw, 32px); margin-bottom: 24px;">
+      <svg viewBox="0 0 1400 420" style="width: 100%; height: auto; display: block;" role="img" aria-label="Command centre illustration: video wall with map, camera and network panels above operator consoles, fed from field devices through the network and data centre">
+        <g fill="none" stroke="#3A5573" stroke-width="1.6">
+          <path d="M120 40 H1280 V220 H120 Z" />
+          <path d="M410 40 V220 M700 40 V220 M990 40 V220" stroke="#25384E" />
+        </g>
+        <g fill="#16283C">
+          <rect x="132" y="52" width="266" height="156" /><rect x="422" y="52" width="266" height="156" /><rect x="712" y="52" width="266" height="156" /><rect x="1002" y="52" width="266" height="156" />
+        </g>
+        <g stroke="#5B9BD5" fill="none" stroke-width="1.4">
+          <path d="M148 180 C220 120 268 168 330 96 M164 196 H382" opacity="0.8" />
+          <path d="M438 68 H672 V192 H438 Z" stroke="#25384E" />
+          <path d="M452 96 H520 V132 H452 Z M540 96 H608 V132 H540 Z M452 148 H520 V182 H452 Z M540 148 H608 V182 H540 Z M628 96 H660 V182 H628 Z" opacity="0.75" />
+          <path d="M728 190 L788 130 L836 164 L892 88 L946 122" />
+          <path d="M1016 100 H1254 M1016 132 H1254 M1016 164 H1254 M1016 196 H1180" stroke-dasharray="8 7" opacity="0.7" />
+        </g>
+        <rect data-anim x="132" y="52" width="42" height="156" fill="#5B9BD5" opacity="0.10" style="animation: it-scan 6s infinite linear;" />
+        <g fill="#EE6A22">
+          <circle data-anim cx="1240" cy="66" r="6" style="animation: it-blink 2.4s infinite ease-in-out;" />
+          <circle data-anim cx="962" cy="66" r="6" style="animation: it-blink 2.4s infinite ease-in-out; animation-delay: 0.8s;" />
+        </g>
+        <g fill="none" stroke="#3A5573" stroke-width="1.6">
+          <path d="M180 300 H480 L440 344 H220 Z" /><path d="M550 300 H850 L810 344 H590 Z" /><path d="M920 300 H1220 L1180 344 H960 Z" />
+          <path d="M256 268 H340 V300 H256 Z" /><path d="M626 268 H710 V300 H626 Z" /><path d="M996 268 H1080 V300 H996 Z" />
+          <path d="M356 268 H440 V300 H356 Z" /><path d="M726 268 H810 V300 H726 Z" /><path d="M1096 268 H1180 V300 H1096 Z" />
+        </g>
+        <g font-family="'IBM Plex Mono', monospace" font-size="12.5" letter-spacing="1" fill="#6E7B8C">
+          <text x="132" y="240">GIS / MAP</text><text x="422" y="240">CCTV FEEDS</text><text x="712" y="240">TRAFFIC MONITORING</text><text x="1002" y="240">NETWORK &amp; SECURITY STATUS</text>
+          <text x="180" y="382">OPERATOR CONSOLES</text><text x="920" y="382" fill="#EE6A22">DECISION MAKERS</text>
+          <text x="20" y="292" font-size="11">FIELD</text><text x="20" y="312" font-size="11">DEVICES</text>
+          <text x="1310" y="316" font-size="11">DATA</text><text x="1310" y="336" font-size="11">CENTRE</text>
+          <text x="180" y="410" fill="#4C6480" font-size="11.5">FIELD DEVICES → NETWORK → DATA CENTRE → COMMAND CENTRE → DECISION MAKERS</text>
+        </g>
+        <g fill="none" stroke="#5B9BD5" stroke-width="1.8">
+          <path data-anim d="M64 300 H176" stroke-dasharray="10 8" style="animation: it-flow 1.4s infinite linear;" />
+          <path data-anim d="M1224 322 H1300" stroke-dasharray="10 8" style="animation: it-flow 1.4s infinite linear;" />
+        </g>
+      </svg>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+      <figure style="margin: 0;">
+        <img src="assets/img/it-ccc-wall.jpg" alt="Command centre video wall displaying maps, dashboards and camera feeds in front of operator desks" style="width: 100%; height: 300px; object-fit: cover; display: block; border: 1px solid rgba(255,255,255,0.12);" />
+        <figcaption style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #6E7B8C;">Video wall — maps, dashboards, camera feeds</figcaption>
+      </figure>
+      <figure style="margin: 0;">
+        <img src="assets/img/it-ccc-wide.jpg" alt="Operator consoles arranged in rows facing the command centre video wall" style="width: 100%; height: 300px; object-fit: cover; display: block; border: 1px solid rgba(255,255,255,0.12);" />
+        <figcaption style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #6E7B8C;">Operator consoles and sightlines</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Data centre" style="background: #FFFFFF; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(32px, 4vw, 64px); align-items: center;">
+      <div>
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">Data centre &amp; computing infrastructure</span>
+        <h2 style="margin: 0 0 20px; max-width: 24ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.6vw, 48px); line-height: 1.03; letter-spacing: -0.03em;">Racks, power, network, cooling — as one build.</h2>
+        <p style="margin: 0 0 20px; max-width: 54ch; font-size: 16.5px; line-height: 1.72; color: #3A3F44;">Server and network racks, structured fibre and copper, storage, UPS and power distribution, cooling, environmental monitoring and physical access control are specified together, because a shortfall in any one of them limits the rest.</p>
+        <p style="margin: 0 0 26px; max-width: 54ch; font-size: 15px; line-height: 1.7; color: #5D646A;">Tier classification, redundancy levels and uptime commitments are stated only where they are formally designed and certified for the project. <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #9A9EA2; border: 1px dashed #C9C5BF; padding: 5px 8px;">[ADD CERTIFICATION IF APPLICABLE]</span></p>
+        <svg viewBox="0 0 620 260" style="width: 100%; max-width: 620px; height: auto; display: block;" role="img" aria-label="Data centre rack elevation with servers, network switches, storage, power and monitoring">
+          <g fill="none" stroke="#C9C5BF" stroke-width="1.6">
+            <path d="M20 20 H180 V240 H20 Z" /><path d="M230 20 H390 V240 H230 Z" /><path d="M440 20 H600 V240 H440 Z" />
+          </g>
+          <g fill="#ECE9E5">
+            <rect x="30" y="32" width="140" height="20" /><rect x="30" y="58" width="140" height="20" /><rect x="30" y="84" width="140" height="20" /><rect x="30" y="110" width="140" height="34" /><rect x="30" y="150" width="140" height="34" /><rect x="30" y="190" width="140" height="40" />
+            <rect x="240" y="32" width="140" height="20" /><rect x="240" y="58" width="140" height="26" /><rect x="240" y="90" width="140" height="26" /><rect x="240" y="122" width="140" height="44" /><rect x="240" y="172" width="140" height="58" />
+            <rect x="450" y="32" width="140" height="26" /><rect x="450" y="64" width="140" height="26" /><rect x="450" y="96" width="140" height="44" /><rect x="450" y="146" width="140" height="34" /><rect x="450" y="186" width="140" height="44" />
+          </g>
+          <g fill="#C9430F">
+            <circle data-anim cx="40" cy="42" r="3.6" style="animation: it-blink 2s infinite ease-in-out;" />
+            <circle data-anim cx="52" cy="42" r="3.6" style="animation: it-blink 2s infinite ease-in-out; animation-delay: 0.3s;" />
+            <circle data-anim cx="250" cy="42" r="3.6" style="animation: it-blink 2s infinite ease-in-out; animation-delay: 0.6s;" />
+            <circle data-anim cx="460" cy="44" r="3.6" style="animation: it-blink 2s infinite ease-in-out; animation-delay: 0.9s;" />
+            <circle data-anim cx="472" cy="44" r="3.6" style="animation: it-blink 2s infinite ease-in-out; animation-delay: 1.2s;" />
+          </g>
+          <g stroke="#5B9BD5" stroke-width="1.6" fill="none">
+            <path data-anim d="M180 96 H230" stroke-dasharray="8 6" style="animation: it-flow 1.2s infinite linear;" />
+            <path data-anim d="M390 128 H440" stroke-dasharray="8 6" style="animation: it-flow 1.2s infinite linear; animation-delay: 0.3s;" />
+          </g>
+          <g font-family="'IBM Plex Mono', monospace" font-size="11" fill="#8A8580" letter-spacing="0.6">
+            <text x="20" y="256">SERVERS · STORAGE</text><text x="230" y="256">NETWORK · FIBRE</text><text x="440" y="256">UPS · POWER · MONITORING</text>
+          </g>
+        </svg>
+      </div>
+      <figure style="margin: 0;">
+        <img src="assets/img/it-racks.jpg" alt="Two enclosed server and network racks with patch panels, switches, servers and structured fibre cabling, access controlled doors and overhead detection" style="width: 100%; height: clamp(340px, 44vw, 620px); object-fit: cover; display: block; border: 1px solid #DCD9D4;" />
+        <figcaption style="margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #8A8580;">Server and network racks with structured cabling and access control</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Security and surveillance" style="background: #111C2A; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #EE6A22; margin-bottom: 20px;">Security &amp; surveillance</span>
+    <h2 style="margin: 0 0 18px; max-width: 26ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em; color: #FFFFFF;">Physical security and cybersecurity, kept distinct and connected.</h2>
+    <p style="margin: 0 0 40px; max-width: 62ch; font-size: 16.5px; line-height: 1.7; color: #A8B3C0; font-weight: 300;">Cameras, recording and video management protect the site; network security, firewalls and access control protect the system carrying that video. They are different disciplines that have to be designed together.</p>
+    <div style="background: rgba(255,255,255,0.03); box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: clamp(18px, 2.4vw, 32px);">
+      <svg viewBox="0 0 1300 300" style="width: 100%; height: auto; display: block;" role="img" aria-label="Surveillance chain from CCTV cameras through the network and video management to analytics and the command centre, with cybersecurity protecting the network layer">
+        <g fill="none" stroke="#3A5573" stroke-width="1.6">
+          <path d="M40 96 H220 V176 H40 Z" /><path d="M300 96 H480 V176 H300 Z" /><path d="M560 96 H740 V176 H560 Z" /><path d="M820 96 H1000 V176 H820 Z" /><path d="M1080 96 H1260 V176 H1080 Z" />
+          <path d="M300 216 H740 V276 H300 Z" stroke="#EE6A22" stroke-dasharray="7 6" />
+        </g>
+        <g fill="none" stroke="#5B9BD5" stroke-width="2">
+          <path data-anim d="M228 136 H292" stroke-dasharray="9 7" style="animation: it-flow 1.2s infinite linear;" />
+          <path data-anim d="M488 136 H552" stroke-dasharray="9 7" style="animation: it-flow 1.2s infinite linear; animation-delay: 0.25s;" />
+          <path data-anim d="M748 136 H812" stroke-dasharray="9 7" style="animation: it-flow 1.2s infinite linear; animation-delay: 0.5s;" />
+          <path data-anim d="M1008 136 H1072" stroke-dasharray="9 7" style="animation: it-flow 1.2s infinite linear; animation-delay: 0.75s;" />
+        </g>
+        <g fill="none" stroke="#EE6A22" stroke-width="1.6">
+          <path d="M390 216 V180 M650 216 V180" stroke-dasharray="6 6" />
+        </g>
+        <g font-family="'IBM Plex Mono', monospace" font-size="13" letter-spacing="1" fill="#C7D0DA">
+          <text x="60" y="132">CCTV</text><text x="60" y="154">CAMERAS</text>
+          <text x="320" y="132">NETWORK</text><text x="320" y="154" font-size="11" fill="#6E7B8C">SWITCHING · FIBRE</text>
+          <text x="580" y="132">VIDEO</text><text x="580" y="154">MANAGEMENT</text>
+          <text x="840" y="132">ANALYTICS</text><text x="840" y="154" font-size="11" fill="#6E7B8C">EVENTS · ALERTS</text>
+          <text x="1100" y="132">COMMAND</text><text x="1100" y="154">CENTRE</text>
+          <text x="320" y="248" fill="#EE6A22">CYBERSECURITY</text><text x="320" y="268" font-size="11" fill="#8C99A8">FIREWALLS · SEGMENTATION · ACCESS CONTROL · DATA PROTECTION</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="How we engage" style="background: #F5F4F2; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">How we engage</span>
+    <h2 style="margin: 0 0 44px; max-width: 24ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em;">Six steps, from requirement to support.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px;">
+      <sc-for list="{{ engage }}" as="e" hint-placeholder-count="6">
+        <div style="background: #FFFFFF; box-shadow: 0 0 0 1px #DCD9D4; padding: 32px 26px 34px;">
+          <span style="display: block; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 34px; letter-spacing: -0.04em; color: #E4E1DC;">{{ e.n }}</span>
+          <h3 style="margin: 12px 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #C9430F;">{{ e.name }}</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #5D646A;">{{ e.v }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Solution architecture" style="background: #0A1220; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #EE6A22; margin-bottom: 20px;">Solution architecture</span>
+    <h2 style="margin: 0 0 18px; max-width: 26ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.6vw, 50px); line-height: 1.03; letter-spacing: -0.03em; color: #FFFFFF;">Eight layers, one system.</h2>
+    <p style="margin: 0 0 36px; max-width: 62ch; font-size: 16.5px; line-height: 1.7; color: #8C99A8; font-weight: 300;">Select a layer to see where it sits in the architecture. The advisory value is in reading them together — each is only useful in relation to the others.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px;">
+      <sc-for list="{{ layerTabs }}" as="t" hint-placeholder-count="8">
+        <button type="button" onClick="{{ t.pick }}" style="background: {{ t.bg }}; color: {{ t.fg }}; box-shadow: inset 0 0 0 1px {{ t.ring }}; border: 0; padding: 13px 18px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer;">{{ t.name }}</button>
+      </sc-for>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 3.5vw, 48px); align-items: center; background: rgba(255,255,255,0.03); box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: clamp(22px, 3vw, 40px);">
+      <svg viewBox="0 0 620 420" style="width: 100%; height: auto; display: block;" role="img" aria-label="Aeon technology consulting at the centre, relating network, data, security, surveillance, command, communication, software and hardware layers to the customer organization">
+        <g fill="none" stroke="#5B9BD5" stroke-width="1.5">
+          <path data-anim d="M310 200 L110 60 M310 200 L510 60 M310 200 L60 160 M310 200 L560 160 M310 200 L60 250 M310 200 L560 250 M310 200 L110 340 M310 200 L510 340" stroke-dasharray="9 7" style="animation: it-flow 1.5s infinite linear;" />
+          <path data-anim d="M310 296 V392" stroke="#EE6A22" stroke-width="2" stroke-dasharray="9 7" style="animation: it-flow 1.5s infinite linear;" />
+        </g>
+        <circle cx="310" cy="200" r="86" fill="#111C2A" stroke="#EE6A22" stroke-width="1.8" />
+        <g font-family="'IBM Plex Mono', monospace" text-anchor="middle" font-size="12" letter-spacing="1">
+          <text x="310" y="192" fill="#EE6A22">AEON</text>
+          <text x="310" y="212" fill="#C7D0DA">TECHNOLOGY</text>
+          <text x="310" y="230" fill="#C7D0DA">CONSULTING</text>
+        </g>
+        <g font-family="'IBM Plex Mono', monospace" font-size="11.5" letter-spacing="0.9" fill="#8C99A8">
+          <text x="60" y="52">NETWORK</text><text x="470" y="52">DATA</text>
+          <text x="14" y="156">SECURITY</text><text x="500" y="156">SURVEILLANCE</text>
+          <text x="14" y="254">COMMAND</text><text x="486" y="254">COMMUNICATION</text>
+          <text x="60" y="352">SOFTWARE</text><text x="464" y="352">HARDWARE</text>
+        </g>
+        <g fill="none" stroke="#3A5573" stroke-width="1.6">
+          <path d="M186 392 H434 V420 H186 Z" />
+        </g>
+        <text x="310" y="412" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="12" letter-spacing="1" fill="#EE6A22">CUSTOMER / ORGANIZATION</text>
+      </svg>
+      <div>
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #EE6A22;">Layer</span>
+        <h3 style="margin: 14px 0 14px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(24px, 2.6vw, 34px); letter-spacing: -0.03em; color: #FFFFFF;">{{ layerName }}</h3>
+        <p style="margin: 0; max-width: 46ch; font-size: 16px; line-height: 1.72; color: #A8B3C0;">{{ layerText }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Why Aeon" style="background: #FFFFFF; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">Why work with Aeon</span>
+    <h2 style="margin: 0 0 44px; max-width: 26ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em;">A consultant's mindset, applied to technology.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px 48px;">
+      <sc-for list="{{ why }}" as="w" hint-placeholder-count="6">
+        <div style="border-top: 2px solid #16191C; padding-top: 22px;">
+          <h3 style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #C9430F;">{{ w.name }}</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #3A3F44;">{{ w.v }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="selector" data-screen-label="Requirement selector" style="background: #FFFFFF; border-top: 1px solid #DCD9D4; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">What does your project require?</span>
+    <h2 style="margin: 0 0 18px; max-width: 26ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em;">Tell us what the project involves.</h2>
+    <p style="margin: 0 0 36px; max-width: 62ch; font-size: 15.5px; line-height: 1.7; color: #5D646A;">Select everything that applies. Your selection travels with the enquiry, so the first conversation starts from the requirement rather than from a product list.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 3.5vw, 48px); align-items: start;">
+      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <sc-for list="{{ selector }}" as="s" hint-placeholder-count="13">
+          <button type="button" onClick="{{ s.pick }}" style="background: {{ s.bg }}; color: {{ s.fg }}; box-shadow: inset 0 0 0 1px {{ s.ring }}; border: 0; padding: 13px 17px; font-family: 'IBM Plex Sans', sans-serif; font-size: 14.5px; cursor: pointer;">{{ s.v }}</button>
+        </sc-for>
+      </div>
+      <div style="background: #0A1220; padding: clamp(26px, 3vw, 40px);">
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #EE6A22;">{{ pickCount }}</span>
+        <h3 style="margin: 16px 0 14px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(22px, 2.4vw, 30px); letter-spacing: -0.03em; color: #FFFFFF;">Let's discuss your requirement.</h3>
+        <p style="margin: 0 0 26px; font-size: 15.5px; line-height: 1.65; color: #A8B3C0;">{{ pickList }}</p>
+        <a href="#enquiry" style="display: inline-flex; align-items: center; gap: 10px; background: #C9430F; color: #FFFFFF; padding: 16px 24px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;" style-hover="background: #EE6A22;">Continue to enquiry →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="enquiry" data-screen-label="Enquiry form" style="background: #F5F4F2; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">Enquiry</span>
+    <h2 style="margin: 0 0 18px; max-width: 26ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em;">Discuss your IT infrastructure project.</h2>
+    <p style="margin: 0 0 44px; max-width: 62ch; font-size: 15.5px; line-height: 1.7; color: #5D646A;">Describe the requirement, the sector and the environment it sits in. If an RFP, BOQ or specification exists, attach it — the response can then be specific rather than general.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(32px, 4vw, 56px); align-items: start;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+        <input type="text" name="name" placeholder="Name" style="background: #FFFFFF; border: 1px solid #DCD9D4; padding: 16px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21;" />
+        <input type="text" name="organization" placeholder="Organization" style="background: #FFFFFF; border: 1px solid #DCD9D4; padding: 16px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21;" />
+        <input type="text" name="designation" placeholder="Designation" style="background: #FFFFFF; border: 1px solid #DCD9D4; padding: 16px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21;" />
+        <input type="email" name="email" placeholder="Email" style="background: #FFFFFF; border: 1px solid #DCD9D4; padding: 16px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21;" />
+        <input type="tel" name="phone" placeholder="Phone" style="background: #FFFFFF; border: 1px solid #DCD9D4; padding: 16px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21;" />
+        <input type="text" name="sector" placeholder="Sector" style="background: #FFFFFF; border: 1px solid #DCD9D4; padding: 16px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21;" />
+        <input type="text" name="location" placeholder="Location" style="background: #FFFFFF; border: 1px solid #DCD9D4; padding: 16px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21;" />
+        <input type="text" name="projecttype" placeholder="Project type" style="background: #FFFFFF; border: 1px solid #DCD9D4; padding: 16px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21;" />
+        <input type="text" name="scope" placeholder="Approximate project scope" style="background: #FFFFFF; border: 1px solid #DCD9D4; padding: 16px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21;" />
+        <input type="text" name="timeline" placeholder="Expected timeline" style="background: #FFFFFF; border: 1px solid #DCD9D4; padding: 16px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21;" />
+        <textarea name="requirement" placeholder="Requirement description — systems involved, existing infrastructure, integration expectations" rows="6" style="grid-column: 1 / -1; background: #FFFFFF; border: 1px solid #DCD9D4; padding: 16px 16px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; color: #1A1E21; resize: vertical;"></textarea>
+      </div>
+      <div>
+        <div style="border: 1px dashed {{ dropBorder }}; background: {{ dropBg }}; padding: clamp(26px, 3vw, 40px); text-align: center;">
+          <span style="display: block; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em;">{{ fileHeadline }}</span>
+          <span style="display: block; margin: 12px auto 0; max-width: 40ch; font-size: 14.5px; line-height: 1.62; color: #5D646A;">{{ fileHint }}</span>
+          <input type="file" multiple="{{ true }}" ref="{{ fileRef }}" onChange="{{ onFiles }}" style="display: none;" />
+          <button type="button" onClick="{{ pickFile }}" style="margin-top: 22px; background: #1A1E21; color: #FFFFFF; border: 0; padding: 15px 22px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer;" style-hover="background: #C9430F;">{{ fileButton }}</button>
+        </div>
+        <p style="margin: 20px 0 0; font-size: 14.5px; line-height: 1.68; color: #5D646A;">Your requirement selections are included automatically with the enquiry.</p>
+        <button type="button" onClick="{{ submit }}" style="margin-top: 22px; width: 100%; background: #C9430F; color: #FFFFFF; border: 0; padding: 19px 24px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer;" style-hover="background: #EE6A22;">Submit project requirement →</button>
+        <a href="Contact.dc.html#rfq" style="display: block; margin-top: 12px; width: 100%; box-sizing: border-box; text-align: center; background: transparent; color: #1A1E21; box-shadow: inset 0 0 0 1px #C9C5BF; padding: 19px 24px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;" style-hover="box-shadow: inset 0 0 0 1px #C9430F; color: #C9430F;">Request a consultation</a>
+        <p style="margin: 16px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #8A8580;">salesats@aeontechsolutions.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: #0A1220;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: clamp(72px, 9vw, 128px) clamp(20px, 4vw, 56px);">
+    <h2 style="margin: 0 0 20px; max-width: 24ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(30px, 4.2vw, 60px); line-height: 1.02; letter-spacing: -0.035em; color: #FFFFFF;">Have an IT infrastructure project?</h2>
+    <p style="margin: 0 0 14px; max-width: 56ch; font-size: 17px; line-height: 1.68; color: #C7D0DA; font-weight: 300;">Let's design the right technology ecosystem for your requirement.</p>
+    <p style="margin: 0 0 38px; max-width: 60ch; font-size: 16px; line-height: 1.7; color: #8C99A8; font-weight: 300;">Whether the requirement involves networking, data infrastructure, surveillance, command &amp; control, smart infrastructure or a multi-technology integration project, talk to Aeon about your requirement.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+      <a href="#enquiry" style="display: inline-flex; align-items: center; gap: 10px; background: #C9430F; color: #FFFFFF; padding: 17px 26px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;" style-hover="background: #EE6A22;">Discuss your project →</a>
+      <a href="Contact.dc.html" style="display: inline-flex; align-items: center; gap: 10px; background: transparent; color: #FFFFFF; padding: 17px 26px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.32); font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;" style-hover="box-shadow: inset 0 0 0 1px #EE6A22; color: #EE6A22;">Contact Aeon</a>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Related solutions" style="background: #FFFFFF; padding: clamp(56px, 7vw, 96px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">Related Aeon solutions</span>
+    <h2 style="margin: 0 0 40px; max-width: 26ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(24px, 2.8vw, 38px); line-height: 1.06; letter-spacing: -0.03em;">One technology capability, several verticals.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px;">
+      <sc-for list="{{ related }}" as="r" hint-placeholder-count="6">
+        <a href="{{ r.href }}" style="background: #FFFFFF; box-shadow: 0 0 0 1px #DCD9D4; padding: 28px 24px 30px; display: block; color: #1A1E21;" style-hover="box-shadow: 0 0 0 1px #C9430F;">
+          <span style="display: block; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 17.5px; letter-spacing: -0.02em;">{{ r.name }}</span>
+          <span style="display: block; margin-top: 10px; font-size: 14.5px; line-height: 1.6; color: #5D646A;">{{ r.v }}</span>
+          <span style="display: inline-flex; margin-top: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #C9430F;">View →</span>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</div></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440}}">
+const NEEDS = ['Reliable IT infrastructure', 'Secure connectivity', 'Network availability', 'Data management', 'Cybersecurity', 'Surveillance', 'Communication', 'Command and control', 'Digital governance', 'Smart infrastructure', 'Operational visibility', 'Integrated systems'];
+
+const PILLARS = [
+  ['01', 'IT Hardware', ['Servers', 'Workstations', 'Storage', 'Network hardware', 'Computing infrastructure', 'Peripherals', 'Rack infrastructure', 'Enterprise hardware']],
+  ['02', 'Networking & Connectivity', ['LAN / WAN', 'Structured networking', 'Fibre connectivity', 'Network switches', 'Routers', 'Wireless infrastructure', 'Enterprise connectivity', 'Network architecture']],
+  ['03', 'Security Systems', ['Cybersecurity infrastructure', 'Network security', 'Firewalls', 'Access control', 'Surveillance infrastructure', 'CCTV', 'Security monitoring', 'Data protection']],
+  ['04', 'Data & Computing Infrastructure', ['Data centres', 'Servers', 'Storage', 'Backup infrastructure', 'Virtualization environments', 'Computing infrastructure', 'Disaster recovery infrastructure']],
+  ['05', 'Integration Design & Advisory', ['Command & control centres', 'Integrated monitoring', 'AV / video walls', 'Communication systems', 'Smart city systems', 'Traffic systems', 'E-governance platforms', 'Multi-system architecture']]
+];
+
+const DOMAINS = [
+  ['01', 'Data Centre & Computing Infrastructure', 'Design and integration of infrastructure supporting secure, scalable and reliable computing environments.'],
+  ['02', 'Networking & Telecommunication', 'Enterprise networking, connectivity and communication infrastructure.'],
+  ['03', 'Surveillance & Security', 'Integrated surveillance, monitoring and security infrastructure.'],
+  ['04', 'Command & Control Centres', 'Integrated technology environments for centralized monitoring, coordination and response.'],
+  ['05', 'Smart City & Smart Infrastructure', 'Technology solutions supporting connected urban infrastructure and operational visibility.'],
+  ['06', 'Traffic Management Systems', 'Technology infrastructure for traffic monitoring, control and intelligent transportation environments.'],
+  ['07', 'E-Governance', 'Technology infrastructure supporting digital public services and connected government operations.'],
+  ['08', 'Mobility & Transportation', 'Technology systems supporting transportation and mobility infrastructure.'],
+  ['09', 'E-Education & E-Health', 'Technology infrastructure supporting digital education and healthcare environments.'],
+  ['10', 'Smart Utilities', 'Technology-enabled monitoring, communication and infrastructure solutions.'],
+  ['11', 'Sewage & Waste Management', 'Technology infrastructure and monitoring solutions supporting utility and waste-management environments.']
+];
+
+const SECTORS = ['Defence', 'Banks & financial institutions', 'Municipalities & corporations', 'Police & state home departments', 'State & central electronics / IT departments', 'Public authorities', 'Private organizations', 'Educational institutions', 'Healthcare', 'Transportation', 'Utilities', 'Industrial & commercial organizations'];
+
+const SI_CHAIN = [
+  ['Customer requirement', 'The operating need, the environment it sits in and the outcome expected.'],
+  ['Solution architecture', 'A technology architecture drawn around that requirement.'],
+  ['OEM / technology partners', 'The right products and platforms identified for the architecture.'],
+  ['Specification & integration design', 'How hardware, software, network and security should come together, defined before procurement.'],
+  ['Implementation oversight', 'Execution reviewed against the specification, across site, partners and documentation.'],
+  ['Commissioning', 'Testing, acceptance and handover of the integrated system.'],
+  ['Support', 'Post-deployment support and maintenance as the project requires.']
+];
+
+const COORDINATE = ['Multiple OEMs', 'Hardware suppliers', 'Software providers', 'Network specialists', 'Security vendors', 'Consultants', 'Contractors', 'System integrators', 'Project teams'];
+
+const PREBID = [
+  ['Opportunity identification', 'Understanding emerging requirements and potential technology projects.'],
+  ['Customer & consultant engagement', 'Understanding project objectives, technical requirements and solution expectations.'],
+  ['Solution development', 'Developing an appropriate technology architecture around the customer\u2019s requirement.'],
+  ['OEM alignment', 'Coordinating with relevant technology and OEM partners.'],
+  ['Partner ecosystem', 'Where required, coordinating with larger system integrators, PSUs, consortium partners or specialist backend partners.'],
+  ['Bid & technical support', 'Supporting technical documentation, solution structuring and bid preparation where applicable.']
+];
+
+const POSTBID = ['Project kick-off', 'Execution planning', 'Documentation & milestones', 'OEM / partner coordination', 'Site implementation', 'Testing & commissioning', 'Customer handover', 'Support & maintenance'];
+
+const PRODUCTS = [
+  ['Server & storage', 'Servers, storage infrastructure and computing hardware.'],
+  ['Networking', 'Switches, routers, wireless infrastructure and network components.'],
+  ['Cybersecurity', 'Firewalls, security infrastructure and related technologies.'],
+  ['CCTV & surveillance', 'Cameras, recording, monitoring and surveillance infrastructure.'],
+  ['Video walls', 'LCD / LED and video wall solutions for monitoring and command centres.'],
+  ['Audio visual', 'Professional AV systems, displays, projectors and public-address solutions.'],
+  ['Video conferencing', 'Video collaboration and communication systems.'],
+  ['Data centre infrastructure', 'Technology infrastructure for secure and scalable data-centre environments.'],
+  ['Command & control', 'Integrated display, monitoring, communication and control-room technologies.'],
+  ['Disaster management', 'Emergency communication, response and supporting technology infrastructure.'],
+  ['IT peripherals', 'Enterprise computing and associated peripheral infrastructure.']
+];
+
+const SMART = ['City surveillance', 'Public safety', 'Smart parking', 'Smart classrooms', 'Cybersecurity', 'Mobile traffic enforcement', 'Intelligent traffic management', 'Integrated command & control', 'Data analytics', 'Digital governance'];
+
+const ENGAGE = [
+  ['01', 'Understand', 'Understand the customer\u2019s requirement, operating environment and objectives.'],
+  ['02', 'Assess', 'Assess infrastructure, technology requirements and integration challenges.'],
+  ['03', 'Design', 'Develop an appropriate technology architecture.'],
+  ['04', 'Integrate', 'Coordinate hardware, software, networks and specialist technologies.'],
+  ['05', 'Deploy', 'Support implementation, testing and commissioning.'],
+  ['06', 'Support', 'Provide post-deployment support and maintenance as applicable.']
+];
+
+const LAYERS = [
+  ['Network', 'Structured cabling, switching, routing and wireless — the layer everything else depends on.'],
+  ['Data', 'Servers, storage, backup and virtualization environments sized to the workload.'],
+  ['Security', 'Network security, firewalls, access control and data protection, defined with the customer\u2019s policy.'],
+  ['Surveillance', 'Cameras, recording, video management and monitoring infrastructure.'],
+  ['Command', 'Video walls, operator positions and integrated monitoring in a control-room environment.'],
+  ['Communication', 'AV, video conferencing, public address and emergency communication systems.'],
+  ['Software', 'Management, monitoring and application platforms that make the hardware usable.'],
+  ['Hardware', 'Servers, workstations, racks, peripherals and the physical infrastructure they sit in.']
+];
+
+const WHY = [
+  ['Multi-disciplinary technology approach', 'Bringing multiple technology areas together under one solution framework.'],
+  ['Consulting mindset', 'Looking beyond individual products toward what the organization actually needs to operate.'],
+  ['Vendor-neutral evaluation', 'Products and partners assessed against the requirement rather than a fixed portfolio.'],
+  ['Customized solutions', 'Solutions structured around the customer\u2019s operational and technical needs.'],
+  ['Project coordination', 'Structured coordination across technology, documentation and execution.'],
+  ['Long-term support', 'Support and maintenance options aligned with project requirements.']
+];
+
+const CASE_FIELDS = ['Project name', 'Customer / sector', 'Location', 'Technology', 'Scope', 'Aeon\u2019s role', 'Solution provided', 'Outcome', 'Project date'];
+
+const SELECTOR = ['Data centre', 'Networking', 'CCTV / surveillance', 'Cybersecurity', 'Command & control centre', 'Video wall', 'AV / video conferencing', 'Traffic management', 'Smart city infrastructure', 'E-governance', 'IT hardware', 'End-to-end technology advisory', 'Other'];
+
+const RELATED = [
+  ['Industrial Automation', 'Control, instrumentation and plant automation scope.', 'Products.dc.html'],
+  ['Cable Management Solutions', 'Wire mesh tray systems and structured containment.', 'CableManagement.dc.html'],
+  ['ESP & Air Pollution Control', 'Precipitator equipment, spares and retrofit.', 'ESP.dc.html'],
+  ['Bulk Material Handling', 'Bagging, conveying and truck loading systems.', 'MaterialHandling.dc.html'],
+  ['Products & Services', 'The full Aeon supply and service catalogue.', 'Products.dc.html'],
+  ['Contact Aeon', 'Talk to the team about a requirement.', 'Contact.dc.html']
+];
+
+class Component extends DCLogic {
+  state = { picks: [], layer: 0, files: [] };
+
+  constructor(props) {
+    super(props);
+    this.fileRef = React.createRef();
+  }
+
+  toggle(v) {
+    this.setState(s => ({
+      picks: s.picks.indexOf(v) >= 0 ? s.picks.filter(p => p !== v) : s.picks.concat([v])
+    }));
+  }
+
+  renderVals() {
+    const n = this.state.files.length;
+    const picks = this.state.picks;
+    const li = this.state.layer;
+    return {
+      needs: NEEDS.map(v => ({ v: v })),
+      pillars: PILLARS.map(p => ({ n: p[0], name: p[1], items: p[2].map(i => ({ v: i })) })),
+      domains: DOMAINS.map(d => ({ n: d[0], name: d[1], v: d[2] })),
+      sectors: SECTORS.map(v => ({ v: v })),
+      siChain: SI_CHAIN.map((c, i) => ({ n: i + 1 < 10 ? '0' + (i + 1) : String(i + 1), name: c[0], v: c[1] })),
+      coordinate: COORDINATE.map(v => ({ v: v })),
+      prebid: PREBID.map((p, i) => ({ n: '0' + (i + 1), name: p[0], v: p[1] })),
+      postbid: POSTBID.map((p, i) => ({ n: '0' + (i + 1), name: p })),
+      products: PRODUCTS.map(p => ({ name: p[0], v: p[1] })),
+      smart: SMART.map(v => ({ v: v })),
+      engage: ENGAGE.map(e => ({ n: e[0], name: e[1], v: e[2] })),
+      why: WHY.map(w => ({ name: w[0], v: w[1] })),
+      caseFields: CASE_FIELDS.map(f => ({ k: f })),
+      related: RELATED.map(r => ({ name: r[0], v: r[1], href: r[2] })),
+
+      layerTabs: LAYERS.map((l, i) => ({
+        name: l[0],
+        pick: () => this.setState({ layer: i }),
+        bg: i === li ? '#EE6A22' : 'rgba(255,255,255,0.04)',
+        fg: i === li ? '#0A1220' : '#C7D0DA',
+        ring: i === li ? '#EE6A22' : 'rgba(255,255,255,0.14)'
+      })),
+      layerName: LAYERS[li][0],
+      layerText: LAYERS[li][1],
+
+      selector: SELECTOR.map(v => ({
+        v: v,
+        pick: () => this.toggle(v),
+        bg: picks.indexOf(v) >= 0 ? '#1A1E21' : '#FFFFFF',
+        fg: picks.indexOf(v) >= 0 ? '#FFFFFF' : '#3A3F44',
+        ring: picks.indexOf(v) >= 0 ? '#1A1E21' : '#DCD9D4'
+      })),
+      pickCount: picks.length ? (picks.length === 1 ? '1 requirement selected' : picks.length + ' requirements selected') : 'Nothing selected yet',
+      pickList: picks.length ? picks.join(' · ') : 'Select what the project involves and it travels with your enquiry.',
+
+      fileRef: this.fileRef,
+      pickFile: e => { e.preventDefault(); if (this.fileRef.current) this.fileRef.current.click(); },
+      onFiles: e => {
+        const list = e.target.files ? Array.prototype.slice.call(e.target.files) : [];
+        this.setState({ files: list.map(f => f.name) });
+      },
+      fileHeadline: n ? (n === 1 ? '1 file attached' : n + ' files attached') : 'Upload RFP / BOQ / technical specification',
+      fileHint: n ? this.state.files.join(', ') : 'RFP, BOQ, technical specification, site layout or existing network and system documentation.',
+      fileButton: n ? 'Change files' : 'Attach documents',
+      dropBorder: n ? '#EE6A22' : '#C9C5BF',
+      dropBg: n ? 'rgba(238,106,34,0.06)' : '#FAF9F7',
+      submit: () => {
+        const lines = [];
+        if (picks.length) lines.push('Requirement: ' + picks.join(', '), '');
+        if (n) lines.push('Attached: ' + this.state.files.join(', ') + ' (please attach the files to this email before sending).');
+        window.location.href = 'mailto:salesats@aeontechsolutions.com'
+          + '?subject=' + encodeURIComponent('IT infrastructure & systems integration project enquiry')
+          + (lines.length ? '&body=' + encodeURIComponent(lines.join('\n')) : '');
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

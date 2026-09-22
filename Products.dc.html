@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Products &amp; Equipment Catalogue | Aeon Tech Solutions</title>
+<meta name="description" content="ESP mechanical spares, ESP electrical and control equipment, wire mesh cable trays and accessories, bagging and bulk material handling equipment." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #F5F4F2; -webkit-font-smoothing: antialiased; }
+  a { color: #C9430F; text-decoration: none; }
+  a:hover { color: #EE6A22; }
+  input::placeholder { color: #9A9EA2; }
+</style>
+</helmet>
+
+<div style="font-family: 'IBM Plex Sans', sans-serif; color: #1A1E21; background: #F5F4F2;">
+<dc-import name="SiteHeader" hint-size="100%,84px" style="position: sticky; top: 0; z-index: 900;"></dc-import>
+<dc-import name="FloatingContact" hint-size="220px,170px"></dc-import>
+
+<section data-screen-label="Products hero" style="background: #0D0F11;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: clamp(56px, 7vw, 92px) clamp(20px, 4vw, 56px) clamp(56px, 7vw, 92px);">
+    <div style="display: flex; gap: 10px; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6E747A; margin-bottom: 42px;">
+      <a href="Home.dc.html" style="color: #6E747A;" style-hover="color: #EE6A22;">Home</a><span>/</span><span style="color: #EE6A22;">Products</span>
+    </div>
+    <h1 style="margin: 0; max-width: 20ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(38px, 5.4vw, 82px); line-height: 1.0; letter-spacing: -0.035em; color: #FFFFFF;">Products &amp; Equipment</h1>
+    <p style="margin: 30px 0 0; max-width: 62ch; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.65; color: #C1C6CA; font-weight: 300;">Components and equipment we supply across the three verticals. Specifications are made to the installed arrangement — select an item to see what we need from you in order to quote it.</p>
+  </div>
+</section>
+
+<section data-screen-label="Catalogue" style="background: #F5F4F2; padding: clamp(40px, 5vw, 64px) 0 clamp(72px, 9vw, 120px);">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; padding-bottom: 24px; border-bottom: 1px solid #DCD9D4; margin-bottom: 32px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+        <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+          <button onClick="{{ f.go }}" style="cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 13px 18px; border-radius: 2px; border: 1px solid {{ f.border }}; background: {{ f.bg }}; color: {{ f.fg }};">{{ f.label }} <span style="opacity: 0.6;">{{ f.count }}</span></button>
+        </sc-for>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; border: 1px solid #C9C5BF; background: #FFFFFF; padding: 0 14px; min-width: 260px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9A9EA2;">⌕</span>
+        <input type="search" value="{{ query }}" onChange="{{ setQuery }}" placeholder="Search products" style="border: none; outline: none; background: transparent; font-family: 'IBM Plex Sans', sans-serif; font-size: 14.5px; color: #1A1E21; padding: 14px 0; width: 100%;" />
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+      <sc-for list="{{ shown }}" as="p">
+        <div id="{{ p.slug }}" style="background: #FFFFFF; border: 1px solid #DCD9D4; display: flex; flex-direction: column;">
+          <span style="display: block; height: 168px; overflow: hidden; background: {{ p.thumbBg }}; display: flex; align-items: center; justify-content: center;">
+            <sc-if value="{{ p.hasImg }}" hint-placeholder-val="{{ false }}">
+              <img src="{{ p.img }}" alt="{{ p.alt }}" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(0.22);" />
+            </sc-if>
+            <sc-if value="{{ p.noImg }}" hint-placeholder-val="{{ false }}">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; color: #8A8580; background: #F5F4F2; padding: 7px 11px;">{{ p.phLabel }}</span>
+            </sc-if>
+          </span>
+          <span style="display: block; padding: 24px 24px 26px; flex: 1;">
+            <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: #9A9EA2;">{{ p.cat }}</span>
+            <span style="display: block; margin-top: 12px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 19.5px; letter-spacing: -0.02em; color: #1A1E21;">{{ p.name }}</span>
+            <span style="display: block; margin-top: 10px; font-size: 14.5px; line-height: 1.62; color: #5D646A;">{{ p.desc }}</span>
+            <span style="display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; margin-top: 18px;">
+              <a href="{{ p.page }}" style="display: {{ p.pageDisplay }}; align-items: center; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;">Full Product Page →</a>
+              <button onClick="{{ p.toggle }}" style="cursor: pointer; background: transparent; border: none; padding: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #C9430F;">{{ p.toggleLabel }}</button>
+            </span>
+            <span style="display: {{ p.detailDisplay }}; flex-direction: column; gap: 10px; margin-top: 20px; padding-top: 20px; border-top: 1px solid #DCD9D4;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #9A9EA2;">To quote this, we need</span>
+              <sc-for list="{{ p.needs }}" as="n" hint-placeholder-count="3">
+                <span style="display: flex; gap: 10px; align-items: baseline; font-size: 14.5px; line-height: 1.55; color: #3A3F44;"><span style="color: #C9430F; font-family: 'IBM Plex Mono', monospace; font-size: 12px;">—</span><span>{{ n.text }}</span></span>
+              </sc-for>
+              <a href="Contact.dc.html#rfq" style="margin-top: 8px; display: inline-flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;">Request a Quote →</a>
+            </span>
+          </span>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="display: {{ emptyDisplay }}; border: 1px dashed #C9C5BF; padding: 56px 32px; text-align: center; background: #FFFFFF;">
+      <p style="margin: 0; font-size: 16px; color: #5D646A;">No products match that search. Try a different term, or send us the requirement directly.</p>
+      <a href="Contact.dc.html#rfq" style="display: inline-block; margin-top: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase;">Send Your Requirement →</a>
+    </div>
+  </div>
+</section>
+
+<section style="background: #16191C;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: clamp(64px, 8vw, 112px) clamp(20px, 4vw, 56px);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(32px, 5vw, 72px); align-items: end;">
+      <div>
+        <h2 style="margin: 0 0 18px; max-width: 26ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.6vw, 52px); line-height: 1.03; letter-spacing: -0.035em; color: #FFFFFF;">Not sure which part you need?</h2>
+        <p style="margin: 0; max-width: 54ch; font-size: 16.5px; line-height: 1.68; color: #9AA0A6; font-weight: 300;">Send a photograph of the component or the nameplate. In most cases that is enough for us to identify it and come back with a specification.</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+        <a href="Contact.dc.html#rfq" style="display: inline-flex; align-items: center; gap: 12px; background: #EE6A22; color: #0D0F11; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 19px 30px; border-radius: 2px;" style-hover="background: #FF8340;">Identify a Part →</a>
+        <a href="Resources.dc.html#catalogues" style="display: inline-flex; align-items: center; gap: 12px; border: 1px solid rgba(255,255,255,0.28); color: #F5F4F2; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 19px 30px; border-radius: 2px;" style-hover="border-color: #EE6A22; color: #EE6A22;">Download Catalogues</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440}}">
+const CATS = [
+  { key: 'all', label: 'All' },
+  { key: 'esp-mech', label: 'ESP Mechanical' },
+  { key: 'esp-elec', label: 'ESP Electrical' },
+  { key: 'cable', label: 'Cable Management' },
+  { key: 'bulk', label: 'Bulk Handling' }
+];
+const CATNAME = { 'esp-mech': 'ESP Mechanical Spares', 'esp-elec': 'ESP Electrical & Controls', 'cable': 'Cable Management', 'bulk': 'Bulk Material Handling' };
+const P = [
+  { slug: 'collecting-electrodes', c: 'esp-mech', n: 'Collecting Electrodes', d: 'Collecting plates and complete field sets, manufactured to the profile, length and suspension arrangement of the installed ESP.', img: 'assets/img/ce-hero-stack.jpg', alt: 'Roll formed ESP collecting electrodes stacked in the fabrication shop', page: 'ProductCollectingElectrodes.dc.html', needs: ['Plate profile and gauge, or a sample / photograph', 'Plate length and number per field', 'Field arrangement and quantity required'] },
+  { slug: 'discharge-electrodes', c: 'esp-mech', n: 'Discharge Electrodes', d: 'Discharge electrodes and frames, supplied with the suspension, alignment and insulation components they run on.', img: 'assets/img/de-barbed-detail.jpg', alt: 'Barbed ESP discharge electrodes on tubular support frames', page: 'ProductDischargeElectrodes.dc.html', needs: ['Electrode type (spiral, rigid, mast, barbed) and section', 'Frame dimensions and mounting arrangement', 'Number of frames or fields'] },
+  { slug: 'internals', c: 'esp-mech', n: 'ESP Internals', d: 'Rapping hammers, shafts, hammer arms, anvils, frames, gas distribution screens and internal hardware for the precipitator.', img: 'assets/img/int-cross-members.jpg', alt: 'Formed ESP internal cross members stacked after priming', page: 'ProductESPInternals.dc.html', needs: ['Component drawing, sample or photograph', 'Material grade in current use', 'Quantity and required delivery window'] },
+  { slug: 'rapping', c: 'esp-elec', n: 'Rapping System Components', d: 'Rapping shafts, tumbling hammers, hammer pins, anvils and bearing assemblies for both collecting and discharge rapping.', img: 'assets/img/rapping-hammers.png', alt: 'Primed cast ESP tumbling rapping hammers with arms and pins, stacked before despatch', page: 'ProductESPInternals.dc.html#hammers', needs: ['Shaft length, journal size and hammer count', 'Hammer weight and drive arrangement', 'Bearing type and mounting detail'] },
+  { slug: 'insulators', c: 'esp-elec', n: 'HV Insulators', d: 'Support insulators, shaft insulators and HV bushings, including replacements for obsolete or discontinued profiles.', img: 'assets/img/ins-cylindrical.jpg', alt: 'Glazed hollow ceramic support insulators for ESP discharge electrode suspension', page: 'ProductHVInsulators.dc.html', needs: ['Insulator height, flange PCD and bolt pattern', 'Operating temperature and creepage requirement', 'Photograph of the existing unit in situ'] },
+  { slug: 'tr-sets', c: 'esp-elec', n: 'Transformer Rectifier Sets', d: 'TR sets for ESP fields with bushings, oil-filled tanks, HV components and associated protection.', img: 'assets/img/tr-set-shop.jpg', alt: 'Transformer rectifier set on the shop floor before despatch', page: 'ProductHVTRSets.dc.html#trsets', needs: ['Existing TR set nameplate (kV, mA, kVA)', 'Field size and current energisation type', 'Terminal, bushing and mounting arrangement'] },
+  { slug: 'controllers', c: 'esp-elec', n: 'ESP Controllers & Panels', d: 'Controllers, control panels and instrumentation, including retrofit of obsolete control systems onto sound TR sets.', img: 'assets/img/ctrl-panels-v2.jpg', alt: 'ESP control cabinet shown closed and with the door open exposing the internal control assembly, beside an automatic voltage controller display reading kV, mA and firing angle', page: 'ProductHVTRSets.dc.html#controls', needs: ['Existing controller make, model and vintage', 'Number of fields and required interlocks', 'DCS / SCADA interface requirement'] },
+  { slug: 'migi-coils', c: 'esp-elec', n: 'MIGI Rapper Coils & Controls', d: 'Magnetic impulse gravity impact rapper coils, plungers, anvils, rods and rapper control panels for collecting and discharge electrode rapping.', img: 'assets/img/migi-coils-row.jpg', alt: 'MIGI rapper coil housings with terminal boxes along an ESP roof walkway', page: 'ProductMIGICoils.dc.html', needs: ['Rapper make, model and nameplate coil rating', 'Number of rappers and fields involved', 'Collecting or discharge electrode rapping'] },
+  { slug: 'wire-mesh-tray', c: 'cable', n: 'Wire Mesh Cable Trays', d: 'Basket trays in multiple widths and heights, supplied in standard 3 m lengths with EZ, HDG, SS304, SS316 or epoxy finishes.', img: 'assets/img/tray-stock.jpg', alt: 'Wire mesh basket cable trays stacked on pallets', needs: ['Cable fill: number, diameter and weight per run', 'Support span and required safe working load', 'Environment — indoor, outdoor, marine, chemical'] },
+  { slug: 'tray-accessories', c: 'cable', n: 'Tray Accessories & Supports', d: 'Connectors, couplers, connecting tabs, fasteners, wall and ceiling brackets, hangers, side plates and dividers.', img: 'assets/img/tray-install.jpg', alt: 'Wire mesh tray run being installed on supports', needs: ['Tray widths and heights in use', 'Support type — wall, ceiling, floor, trapeze', 'Total run length and branch / riser count'] },
+  { slug: 'bagging-machines', c: 'bulk', n: 'Bagging Machines', d: 'Automatic and semi-automatic open-mouth and valve bag filling machines with net or gross weighing.', img: 'assets/img/bagging-line.jpg', alt: 'Bagging machines and weighing units beneath the storage hoppers of an installed line', needs: ['Material, bulk density and flow behaviour', 'Bag type, size and fill weight', 'Required bags per hour and shift pattern'] },
+  { slug: 'conveying', c: 'bulk', n: 'Conveying Systems', d: 'Belt conveyors, bucket elevators and screw conveyors in inclined and horizontal configurations to suit plant layout.', img: 'assets/img/barge-loading.jpg', alt: 'Long belt conveyor carrying bulk material across the plant', needs: ['Material and throughput in tonnes per hour', 'Lift height, run length and layout constraints', 'Dust containment requirement'] },
+  { slug: 'loading', c: 'bulk', n: 'Truck & Vessel Loading', d: 'Telescopic and fixed loading chutes, mobile conveyors and loading arms for low-dust truck and barge loading.', img: 'assets/img/bagging-conveyor.jpg', alt: 'Loading conveyor delivering bagged product for truck and vessel despatch', needs: ['Loading point geometry and reach required', 'Vehicle or vessel type and turnaround target', 'Dust suppression or extraction requirement'] },
+];
+
+class Component extends DCLogic {
+  state = { cat: 'all', q: '', open: null };
+
+  componentDidMount() {
+    const h = (window.location.hash || '').replace('#', '');
+    if (h && P.some(p => p.slug === h)) this.setState({ open: h });
+  }
+
+  renderVals() {
+    const q = this.state.q.trim().toLowerCase();
+    const match = p => (this.state.cat === 'all' || p.c === this.state.cat) &&
+      (!q || (p.n + ' ' + p.d + ' ' + CATNAME[p.c]).toLowerCase().indexOf(q) >= 0);
+    const shown = P.filter(match);
+    return {
+      query: this.state.q,
+      setQuery: e => this.setState({ q: e.target.value }),
+      emptyDisplay: shown.length ? 'none' : 'block',
+      filters: CATS.map(c => ({
+        label: c.label,
+        count: c.key === 'all' ? P.length : P.filter(p => p.c === c.key).length,
+        bg: this.state.cat === c.key ? '#16191C' : '#FFFFFF',
+        fg: this.state.cat === c.key ? '#EE6A22' : '#3A3F44',
+        border: this.state.cat === c.key ? '#16191C' : '#C9C5BF',
+        go: () => this.setState({ cat: c.key })
+      })),
+      shown: shown.map(p => {
+        const open = this.state.open === p.slug;
+        return {
+          slug: p.slug, name: p.n, desc: p.d, cat: CATNAME[p.c],
+          page: p.page || '', hasPage: !!p.page, pageDisplay: p.page ? 'inline-flex' : 'none',
+          img: p.img, alt: p.alt || p.n,
+          hasImg: !!p.img, noImg: !p.img,
+          phLabel: p.ph || '',
+          thumbBg: p.img ? '#E4E1DC' : 'repeating-linear-gradient(135deg, #E4E1DC 0 12px, #DAD6D0 12px 24px)',
+          detailDisplay: open ? 'flex' : 'none',
+          toggleLabel: open ? 'Close details −' : 'What we need to quote +',
+          toggle: () => this.setState(s => ({ open: s.open === p.slug ? null : p.slug })),
+          needs: p.needs.map(t => ({ text: t }))
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>

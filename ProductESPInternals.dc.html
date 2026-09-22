@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>ESP Internals &amp; Internal Components | Rapping Hammers, Shafts, Frames &amp; Gas Distribution | Aeon Tech Solutions</title>
+<meta name="description" content="ESP internals and internal components — rapping hammers, rapper arms, rapping shafts, anvils, ESP frames and support structures, gas distribution screens and plates, baffles and internal hardware for ESP maintenance, replacement and retrofit." />
+<meta name="keywords" content="ESP internals, ESP internal components, ESP spare parts, ESP rapping hammers, ESP rapping shafts, ESP hammer arms, ESP rapping system components, ESP anvils, ESP frames, ESP support frames, ESP gas distribution screens, ESP gas distribution plates, ESP baffles, ESP internal hardware, ESP replacement components, ESP retrofit components, electrostatic precipitator spare parts" />
+<meta property="og:title" content="ESP Internal Components | Aeon Tech Solutions" />
+<meta property="og:description" content="Mechanical, structural and gas-flow components used within Electrostatic Precipitators — supplied against customer drawings, samples or OEM specifications." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #F5F4F2; -webkit-font-smoothing: antialiased; }
+  a { color: #C9430F; text-decoration: none; }
+  a:hover { color: #EE6A22; }
+  input, select, textarea { font-family: 'IBM Plex Sans', sans-serif; }
+  input::placeholder, textarea::placeholder { color: #A9A5A0; }
+</style>
+</helmet>
+
+<div style="font-family: 'IBM Plex Sans', sans-serif; color: #1A1E21; background: #F5F4F2;">
+<dc-import name="SiteHeader" hint-size="100%,84px" style="position: sticky; top: 0; z-index: 900;"></dc-import>
+<dc-import name="FloatingContact" hint-size="220px,170px"></dc-import>
+
+<section data-screen-label="ESP internals hero" style="position: relative; background: #0D0F11; overflow: hidden;">
+  <img src="assets/img/int-frames-yard.jpg" alt="ESP internal frames and structural members primed and stacked in the works yard" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; filter: grayscale(0.3) contrast(1.05);" />
+  <div style="position: absolute; inset: 0; background: linear-gradient(96deg, #0D0F11 8%, rgba(13,15,17,0.85) 52%, rgba(13,15,17,0.42) 100%);"></div>
+  <div style="position: relative; max-width: 1560px; margin: 0 auto; padding: clamp(48px, 6vw, 84px) clamp(20px, 4vw, 56px) clamp(60px, 8vw, 108px);">
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6E747A; margin-bottom: 40px;">
+      <a href="Home.dc.html" style="color: #6E747A;" style-hover="color: #EE6A22;">Home</a><span>/</span><a href="Products.dc.html" style="color: #6E747A;" style-hover="color: #EE6A22;">Products</a><span>/</span><a href="ESP.dc.html#spares" style="color: #6E747A;" style-hover="color: #EE6A22;">ESP Mechanical</a><span>/</span><span style="color: #EE6A22;">ESP Internals</span>
+    </div>
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #EE6A22; margin-bottom: 22px;">ESP Internal Components</span>
+    <h1 style="margin: 0; max-width: 21ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(34px, 4.8vw, 72px); line-height: 1.0; letter-spacing: -0.035em; color: #FFFFFF; text-wrap: balance;">Precision-Engineered Components for ESP Maintenance, Replacement &amp; Retrofit</h1>
+    <p style="margin: 30px 0 0; max-width: 72ch; font-size: clamp(16px, 1.3vw, 19px); line-height: 1.68; color: #C1C6CA; font-weight: 300;">Aeon Tech Solutions supplies the mechanical, structural and gas-flow components used within Electrostatic Precipitators. These components support electrode assemblies, facilitate effective rapping and dust removal, maintain structural alignment and assist in achieving the required gas-flow distribution.</p>
+    <p style="margin: 20px 0 0; max-width: 72ch; font-size: clamp(15px, 1.2vw, 17.5px); line-height: 1.68; color: #9AA0A6; font-weight: 300;">Supplied for new installations, maintenance shutdowns, refurbishment, replacement and retrofit — against customer drawings, existing component dimensions, samples or OEM specifications.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 42px;">
+      <a href="#quote" style="display: inline-flex; align-items: center; gap: 12px; background: #EE6A22; color: #0D0F11; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 19px 30px; border-radius: 2px;" style-hover="background: #FF8340;">Request a Quote →</a>
+      <a href="#gallery" style="display: inline-flex; align-items: center; gap: 12px; border: 1px solid rgba(255,255,255,0.28); color: #F5F4F2; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 19px 30px; border-radius: 2px;" style-hover="border-color: #EE6A22; color: #EE6A22;">See the Components</a>
+    </div>
+  </div>
+</section>
+
+<section id="cutaway" data-screen-label="3D cut-out of an ESP" style="background: #0A0D10; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-end; justify-content: space-between; margin-bottom: 40px;">
+      <div style="max-width: 34ch;">
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #EE6A22; margin-bottom: 20px;">Inside an ESP</span>
+        <h2 style="margin: 0; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em; color: #FFFFFF;">Where these components sit.</h2>
+      </div>
+      <p style="margin: 0; max-width: 48ch; font-size: 15.5px; line-height: 1.7; color: #9AA0A6; font-weight: 300;">A cut-out through the casing with the near wall removed. Electrodes and insulators are shown only as context — each has its own product page.</p>
+    </div>
+
+    <div style="border: 1px solid rgba(255,255,255,0.10); background: linear-gradient(#12161A, #0E1216); overflow-x: auto;">
+      <svg viewBox="0 0 1480 900" width="1480" role="img" aria-label="Three-dimensional cut-out illustration of an electrostatic precipitator with the near wall removed, showing the gas distribution screen, gas distribution plates and baffles, turning vanes, rapping shafts, rapping hammers, hammer arms, anvil arrangement, support frames, internal cross members and brackets, and the dust hopper" style="display: block; width: 100%; min-width: 1180px; height: auto;">
+        <defs>
+          <linearGradient id="i3Roof" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#33404A" /><stop offset="1" stop-color="#232E36" /></linearGradient>
+          <linearGradient id="i3Near" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B353D" /><stop offset="1" stop-color="#1D262C" /></linearGradient>
+          <linearGradient id="i3Back" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#161D22" /><stop offset="1" stop-color="#101519" /></linearGradient>
+          <linearGradient id="i3End" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#202A31" /><stop offset="1" stop-color="#171F25" /></linearGradient>
+          <linearGradient id="i3Floor" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A2228" /><stop offset="1" stop-color="#131A1F" /></linearGradient>
+          <linearGradient id="i3Duct" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2A343C" /><stop offset="1" stop-color="#1B2329" /></linearGradient>
+          <marker id="i3Gas" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5B6D78" /></marker>
+          <marker id="i3Out" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#7FA6B4" /></marker>
+        </defs>
+
+        <polygon points="270,700 400,626 400,556 270,630" fill="url(#i3Duct)" stroke="rgba(255,255,255,0.13)" stroke-width="1.2" />
+        <polygon points="120,660 270,700 270,630 120,590" fill="#1B2329" stroke="rgba(255,255,255,0.13)" stroke-width="1.2" />
+        <polygon points="120,590 270,630 400,556 250,516" fill="#252F36" stroke="rgba(255,255,255,0.13)" stroke-width="1.2" />
+        <g stroke="#5B6D78" stroke-width="2.2" fill="none" marker-end="url(#i3Gas)">
+          <path d="M96 616 L216 648" /><path d="M126 566 L246 598" />
+        </g>
+
+        <polygon points="400,700 940,700 1090,614 550,614" fill="url(#i3Floor)" stroke="rgba(255,255,255,0.16)" stroke-width="1.3" />
+        <polygon points="400,700 940,700 880,830 500,830" fill="#151B20" stroke="rgba(255,255,255,0.15)" stroke-width="1.3" />
+        <polygon points="940,700 1090,614 1010,760 880,830" fill="#0F1418" stroke="rgba(255,255,255,0.15)" stroke-width="1.3" />
+        <g stroke="#8E6B41" stroke-width="2" fill="none" opacity="0.65">
+          <path d="M580 712 L560 800" /><path d="M700 712 L688 806" /><path d="M820 712 L816 806" />
+        </g>
+
+        <polygon points="550,614 1090,614 1090,234 550,234" fill="url(#i3Back)" stroke="rgba(255,255,255,0.16)" stroke-width="1.3" />
+
+        <polygon points="400,700 550,614 550,234 400,320" fill="url(#i3End)" stroke="rgba(255,255,255,0.18)" stroke-width="1.3" />
+        <g stroke="#3E4A53" stroke-width="1.5" fill="none">
+          <path d="M418 686 L568 600" /><path d="M418 592 L568 506" /><path d="M418 498 L568 412" /><path d="M418 404 L568 318" />
+        </g>
+
+        <polygon points="452,668 602,582 602,266 452,352" fill="#0F1418" stroke="#4DA6FF" stroke-width="2" opacity="0.95" />
+        <g stroke="#4DA6FF" stroke-width="1.5" fill="none" opacity="0.85">
+          <path d="M472 656 L622 570" /><path d="M472 600 L622 514" /><path d="M472 544 L622 458" /><path d="M472 488 L622 402" /><path d="M472 432 L622 346" /><path d="M472 376 L622 290" />
+          <path d="M482 662 L482 346" /><path d="M512 645 L512 329" /><path d="M542 628 L542 312" /><path d="M572 611 L572 295" />
+        </g>
+
+        <g stroke="#4DA6FF" stroke-width="2.6" fill="none" opacity="0.9">
+          <path d="M636 646 L666 629 L636 612" /><path d="M636 556 L666 539 L636 522" /><path d="M636 466 L666 449 L636 432" /><path d="M636 376 L666 359 L636 342" />
+        </g>
+
+        <g stroke="#39424A" stroke-width="3" fill="none" opacity="0.9">
+          <path d="M700 596 L850 510 M700 300 L850 214 M700 596 L700 300 M850 510 L850 214" />
+          <path d="M744 596 L894 510 M744 596 L744 300 M894 510 L894 214 M744 300 L894 214" />
+          <path d="M788 596 L938 510 M788 596 L788 300 M938 510 L938 214 M788 300 L938 214" />
+          <path d="M832 596 L982 510 M832 596 L832 300 M982 510 L982 214 M832 300 L982 214" />
+          <path d="M876 596 L1026 510 M876 596 L876 300 M1026 510 L1026 214 M876 300 L1026 214" />
+        </g>
+
+        <g stroke="#6E7A85" stroke-width="4" fill="none">
+          <path d="M690 288 L1040 288" /><path d="M840 202 L1090 202" />
+          <path d="M690 288 L840 202" /><path d="M1040 288 L1090 259" />
+        </g>
+        <g stroke="#7C868E" stroke-width="3.4" fill="none">
+          <path d="M690 606 L1040 606" /><path d="M690 606 L840 520" />
+        </g>
+        <g fill="#C9430F">
+          <rect x="684" y="282" width="14" height="14" /><rect x="834" y="196" width="14" height="14" /><rect x="1034" y="282" width="14" height="14" /><rect x="684" y="600" width="14" height="14" /><rect x="834" y="514" width="14" height="14" />
+        </g>
+
+        <g stroke="#B9C2C9" stroke-width="6" stroke-linecap="round">
+          <path d="M714 252 L864 166" /><path d="M834 252 L984 166" /><path d="M954 252 L1104 166" />
+        </g>
+        <g fill="#8A959E" stroke="#D6DEE4" stroke-width="1.6">
+          <rect x="700" y="238" width="26" height="26" rx="2" /><rect x="820" y="238" width="26" height="26" rx="2" /><rect x="940" y="238" width="26" height="26" rx="2" />
+        </g>
+
+        <g stroke="#9AA6AF" stroke-width="4" fill="none">
+          <path d="M760 232 L760 300" /><path d="M880 232 L880 300" /><path d="M1000 232 L1000 300" />
+        </g>
+        <g fill="#4A555E" stroke="#D6DEE4" stroke-width="2">
+          <path d="M746 300 L774 300 L782 356 L754 356 Z" /><path d="M866 300 L894 300 L902 356 L874 356 Z" /><path d="M986 300 L1014 300 L1022 356 L994 356 Z" />
+        </g>
+        <g fill="#39424A" stroke="#B9C2C9" stroke-width="2">
+          <rect x="742" y="356" width="48" height="30" rx="2" /><rect x="862" y="356" width="48" height="30" rx="2" /><rect x="982" y="356" width="48" height="30" rx="2" />
+        </g>
+
+        <g fill="#2A3238" stroke="#8A959E" stroke-width="2">
+          <rect x="718" y="576" width="52" height="22" /><rect x="838" y="576" width="52" height="22" /><rect x="958" y="576" width="52" height="22" />
+        </g>
+
+        <polygon points="270,700 400,700 400,320 270,394" fill="url(#i3Near)" stroke="rgba(255,255,255,0.20)" stroke-width="1.3" />
+        <polygon points="940,700 1090,614 1090,234 940,320" fill="url(#i3Near)" stroke="rgba(255,255,255,0.20)" stroke-width="1.3" opacity="0.35" />
+        <path d="M400 664 L940 664 L940 700 L400 700 Z" fill="url(#i3Near)" stroke="rgba(255,255,255,0.20)" stroke-width="1.3" />
+        <path d="M400 320 L940 320 L940 344 L400 344 Z" fill="url(#i3Near)" stroke="rgba(255,255,255,0.20)" stroke-width="1.3" />
+        <g stroke="#EE6A22" stroke-width="2.2" fill="none" stroke-dasharray="14 9" opacity="0.7">
+          <path d="M400 344 L400 664" /><path d="M940 344 L940 664" />
+        </g>
+
+        <polygon points="400,320 940,320 1090,234 550,234" fill="url(#i3Roof)" stroke="rgba(255,255,255,0.22)" stroke-width="1.4" />
+        <g stroke="rgba(0,0,0,0.28)" stroke-width="1.6" fill="none">
+          <path d="M520 320 L670 234" /><path d="M640 320 L790 234" /><path d="M760 320 L910 234" /><path d="M880 320 L1030 234" />
+        </g>
+        <g fill="#3E4A53" stroke="#D6DEE4" stroke-width="2">
+          <path d="M700 296 L744 296 L790 270 L746 270 Z" /><path d="M820 296 L864 296 L910 270 L866 270 Z" /><path d="M940 296 L984 296 L1030 270 L986 270 Z" />
+        </g>
+        <g fill="#8A959E" stroke="#D6DEE4" stroke-width="1.6">
+          <rect x="708" y="252" width="30" height="20" rx="2" /><rect x="828" y="252" width="30" height="20" rx="2" /><rect x="948" y="252" width="30" height="20" rx="2" />
+        </g>
+
+        <polygon points="1090,556 1240,516 1240,442 1090,478" fill="url(#i3Duct)" stroke="rgba(255,255,255,0.13)" stroke-width="1.2" />
+        <polygon points="1090,614 1240,574 1240,516 1090,556" fill="#1B2329" stroke="rgba(255,255,255,0.13)" stroke-width="1.2" />
+        <g stroke="#7FA6B4" stroke-width="2.2" fill="none" marker-end="url(#i3Out)" opacity="0.75">
+          <path d="M1136 540 L1288 502" /><path d="M1136 592 L1288 554" />
+        </g>
+
+        <g font-family="IBM Plex Mono, monospace" font-size="19" font-weight="500" letter-spacing="0.9">
+          <g fill="#8FD3FF">
+            <circle cx="330" cy="212" r="16" fill="#4DA6FF" /><text x="330" y="219" text-anchor="middle" fill="#08131F" font-size="17" font-weight="600">1</text>
+            <text x="356" y="219" font-weight="600">GAS DISTRIBUTION SCREEN</text>
+            <path d="M330 228 L330 300 L470 372" stroke="#4DA6FF" stroke-width="1.4" fill="none" />
+          </g>
+          <g fill="#8FD3FF">
+            <circle cx="330" cy="800" r="16" fill="#4DA6FF" /><text x="330" y="807" text-anchor="middle" fill="#08131F" font-size="17" font-weight="600">2</text>
+            <text x="356" y="807">GAS DISTRIBUTION PLATES</text>
+            <path d="M660 798 L700 798 L640 640" stroke="#4DA6FF" stroke-width="1.4" fill="none" stroke-dasharray="5 6" />
+          </g>
+          <g fill="#8FD3FF">
+            <circle cx="330" cy="856" r="16" fill="#4DA6FF" /><text x="330" y="863" text-anchor="middle" fill="#08131F" font-size="17" font-weight="600">3</text>
+            <text x="356" y="863">BAFFLES &amp; TURNING VANES</text>
+            <path d="M700 848 L760 848 L700 664" stroke="#4DA6FF" stroke-width="1.4" fill="none" stroke-dasharray="5 6" />
+          </g>
+          <g fill="#EE6A22">
+            <circle cx="1174" cy="120" r="16" fill="#EE6A22" /><text x="1174" y="127" text-anchor="middle" fill="#0D0F11" font-size="17" font-weight="600">4</text>
+            <text x="1200" y="127" font-weight="600">RAPPING SHAFTS</text>
+            <path d="M1158 120 L1060 172" stroke="#EE6A22" stroke-width="1.4" fill="none" />
+          </g>
+          <g fill="#EE6A22">
+            <circle cx="1174" cy="176" r="16" fill="#EE6A22" /><text x="1174" y="183" text-anchor="middle" fill="#0D0F11" font-size="17" font-weight="600">5</text>
+            <text x="1200" y="183" font-weight="600">RAPPING DRIVES</text>
+            <path d="M1158 176 L1000 262" stroke="#EE6A22" stroke-width="1.4" fill="none" />
+          </g>
+          <g fill="#EE6A22">
+            <circle cx="1174" cy="368" r="16" fill="#EE6A22" /><text x="1174" y="375" text-anchor="middle" fill="#0D0F11" font-size="17" font-weight="600">6</text>
+            <text x="1200" y="375" font-weight="600">HAMMER ARMS</text>
+            <path d="M1158 368 L1030 336" stroke="#EE6A22" stroke-width="1.4" fill="none" />
+          </g>
+          <g fill="#EE6A22">
+            <circle cx="1174" cy="424" r="16" fill="#EE6A22" /><text x="1174" y="431" text-anchor="middle" fill="#0D0F11" font-size="17" font-weight="600">7</text>
+            <text x="1200" y="431" font-weight="600">RAPPING HAMMERS</text>
+            <path d="M1158 424 L1032 380" stroke="#EE6A22" stroke-width="1.4" fill="none" />
+          </g>
+          <g fill="#EE6A22">
+            <circle cx="1174" cy="656" r="16" fill="#EE6A22" /><text x="1174" y="663" text-anchor="middle" fill="#0D0F11" font-size="17" font-weight="600">8</text>
+            <text x="1200" y="663">ANVIL ARRANGEMENT</text>
+            <path d="M1158 656 L1012 590" stroke="#EE6A22" stroke-width="1.4" fill="none" />
+          </g>
+          <g fill="#C8CCD0">
+            <circle cx="1174" cy="256" r="16" fill="#8C9298" /><text x="1174" y="263" text-anchor="middle" fill="#0D0F11" font-size="17" font-weight="600">9</text>
+            <text x="1200" y="263">SUPPORT FRAMES</text>
+            <path d="M1158 256 L1092 246" stroke="#8C9298" stroke-width="1.4" fill="none" />
+          </g>
+          <g fill="#C8CCD0">
+            <circle cx="1174" cy="480" r="16" fill="#8C9298" /><text x="1174" y="487" text-anchor="middle" fill="#0D0F11" font-size="17" font-weight="600">10</text>
+            <text x="1200" y="487">CROSS MEMBERS &amp;</text>
+            <text x="1200" y="510">STRUCTURAL SUPPORTS</text>
+            <path d="M1158 480 L1000 470" stroke="#8C9298" stroke-width="1.4" fill="none" stroke-dasharray="5 6" />
+          </g>
+          <g fill="#C8CCD0">
+            <circle cx="1174" cy="576" r="16" fill="#8C9298" /><text x="1174" y="583" text-anchor="middle" fill="#0D0F11" font-size="17" font-weight="600">11</text>
+            <text x="1200" y="583">BRACKETS, SHAFTS,</text>
+            <text x="1200" y="606">BUSHES &amp; HARDWARE</text>
+            <path d="M1158 576 L1052 528" stroke="#8C9298" stroke-width="1.4" fill="none" stroke-dasharray="5 6" />
+          </g>
+          <g fill="#A88656">
+            <circle cx="330" cy="744" r="16" fill="#8E6B41" /><text x="330" y="751" text-anchor="middle" fill="#0D0F11" font-size="17" font-weight="600">12</text>
+            <text x="356" y="751">DUST HOPPER</text>
+            <path d="M520 736 L600 776" stroke="#8E6B41" stroke-width="1.4" fill="none" />
+          </g>
+          <g fill="#8A9298" font-size="18">
+            <text x="96" y="700">DUST-LADEN</text>
+            <text x="96" y="722">GAS IN</text>
+            <text x="1248" y="748">TREATED GAS OUT</text>
+            <path d="M1300 730 L1300 620" stroke="#8A9298" stroke-width="1.3" fill="none" />
+          </g>
+          <g fill="#5E666D" font-size="17">
+            <text x="700" y="662">TREATMENT FIELDS — SEE ELECTRODE PAGES</text>
+          </g>
+          <g fill="#EE6A22" font-size="16">
+            <text x="404" y="392">CUT PLANE</text>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; margin-top: 24px;">
+      <span style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A9298;"><span style="width: 11px; height: 11px; background: #4DA6FF; display: block;"></span>Gas distribution &amp; flow control</span>
+      <span style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A9298;"><span style="width: 11px; height: 11px; background: #EE6A22; display: block;"></span>Rapping system</span>
+      <span style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A9298;"><span style="width: 11px; height: 11px; background: #8C9298; display: block;"></span>Frames, supports &amp; hardware</span>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" data-screen-label="ESP internal components gallery" style="background: #F5F4F2; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-end; justify-content: space-between; margin-bottom: 44px;">
+      <div style="max-width: 32ch;">
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">ESP Internal Components</span>
+        <h2 style="margin: 0; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em;">Components at the works.</h2>
+      </div>
+      <p style="margin: 0; max-width: 46ch; font-size: 15.5px; line-height: 1.7; color: #5D646A;">Formed, machined, cast, primed and stacked. Collecting electrodes, discharge electrodes, spiral electrodes and insulator assemblies are shown on their own pages.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+      <sc-for list="{{ gallery }}" as="g">
+        <figure style="margin: 0; background: #FFFFFF; border: 1px solid #DCD9D4;">
+          <span style="display: block; height: 230px; overflow: hidden; background: #E4E1DC;"><img src="{{ g.img }}" alt="{{ g.alt }}" style="width: 100%; height: 100%; object-fit: cover; display: block;" /></span>
+          <figcaption style="display: block; padding: 18px 20px 20px;">
+            <span style="display: block; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: -0.015em; color: #1A1E21;">{{ g.t }}</span>
+            <span style="display: block; margin-top: 7px; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #A9A5A0;">{{ g.tag }}</span>
+          </figcaption>
+        </figure>
+      </sc-for>
+    </div>
+
+    <div style="margin-top: clamp(44px, 6vw, 68px);">
+      <h3 style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #C9430F;">Also Supplied</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <sc-for list="{{ also }}" as="a" hint-placeholder-count="16">
+          <span style="font-family: 'IBM Plex Sans', sans-serif; font-size: 14.5px; color: #3A3F44; background: #FFFFFF; border: 1px solid #DCD9D4; padding: 11px 15px;">{{ a }}</span>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="specification" data-screen-label="Technical specification" style="background: #FFFFFF; border-top: 1px solid #DCD9D4; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(36px, 5vw, 76px); align-items: start;">
+      <div>
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">Technical Specification</span>
+        <h2 style="margin: 0 0 22px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em;">Set by your ESP, not by a catalogue.</h2>
+        <p style="margin: 0 0 20px; font-size: 16.5px; line-height: 1.72; color: #3A3F44;">ESP internals are made to the arrangement they belong to. We would rather work from your drawing, the worn component or a photograph with a tape measure in it than publish figures that will not match your unit.</p>
+        <a href="#quote" style="display: inline-flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase;">Send Your Requirement →</a>
+      </div>
+
+      <div style="border: 1px solid #DCD9D4;">
+        <div style="background: #16191C; padding: 16px 22px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #EE6A22;">ESP Internal Components — Specification Sheet</span>
+        </div>
+        <sc-for list="{{ specs }}" as="s" hint-placeholder-count="8">
+          <div style="display: grid; grid-template-columns: minmax(170px, 0.9fr) 1.3fr; border-top: 1px solid #DCD9D4; background: {{ s.bg }};">
+            <span style="padding: 17px 22px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #5D646A;">{{ s.k }}</span>
+            <span style="padding: 17px 22px; font-size: 15px; line-height: 1.55; color: #1A1E21; border-left: 1px solid #DCD9D4;">{{ s.v }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="applications" data-screen-label="Applications" style="background: #F5F4F2; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">Where Our ESP Components Are Used</span>
+    <h2 style="margin: 0 0 44px; max-width: 24ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em;">Applications</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1px;">
+      <sc-for list="{{ apps }}" as="a" hint-placeholder-count="8">
+        <div style="background: #FFFFFF; box-shadow: 0 0 0 1px #DCD9D4; padding: 28px 26px 30px; display: flex; gap: 18px; align-items: flex-start;">
+          <svg viewBox="0 0 40 40" aria-hidden="true" style="width: 32px; height: 32px; flex-shrink: 0; display: block;">
+            <path d="{{ a.icon }}" fill="none" stroke="#C9430F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span style="font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: -0.015em; color: #1A1E21; padding-top: 4px;">{{ a.t }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="sample" data-screen-label="Drawing or sample based supply" style="position: relative; background: #0D0F11; overflow: hidden;">
+  <img src="assets/img/int-brackets-pins.jpg" alt="Fabricated ESP internal brackets and pins laid out at the works" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.14; filter: grayscale(0.6);" />
+  <div style="position: relative; max-width: 1560px; margin: 0 auto; padding: clamp(64px, 8vw, 112px) clamp(20px, 4vw, 56px);">
+    <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #EE6A22; margin-bottom: 20px;">Drawing / Sample Based Supply</span>
+    <h2 style="margin: 0 0 22px; max-width: 26ch; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 58px); line-height: 1.02; letter-spacing: -0.035em; color: #FFFFFF;">Have an Existing Component but No Specification?</h2>
+    <p style="margin: 0 0 48px; max-width: 68ch; font-size: 17px; line-height: 1.7; color: #C1C6CA; font-weight: 300;">Share a photograph, dimensional sketch, old component, OEM drawing or available equipment information with our technical team. We can review the requirement and identify the information needed to develop or source a suitable replacement component.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1px; margin-bottom: 44px;">
+      <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+        <div style="background: rgba(255,255,255,0.03); box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: 30px 26px 32px; display: flex; flex-direction: column; gap: 16px;">
+          <span style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #EE6A22;">STEP {{ st.n }}</span>
+            <svg viewBox="0 0 40 40" aria-hidden="true" style="width: 30px; height: 30px; display: block; flex-shrink: 0;">
+              <path d="{{ st.icon }}" fill="none" stroke="#EE6A22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span style="font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em; color: #FFFFFF;">{{ st.t }}</span>
+          <span style="font-size: 14.5px; line-height: 1.6; color: #9AA0A6;">{{ st.d }}</span>
+        </div>
+      </sc-for>
+    </div>
+
+    <a href="#quote" style="display: inline-flex; align-items: center; gap: 12px; background: #EE6A22; color: #0D0F11; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 20px 32px; border-radius: 2px;" style-hover="background: #FF8340;">Upload Your Requirement →</a>
+  </div>
+</section>
+
+<section id="quote" data-screen-label="Request a quote" style="background: #F5F4F2; padding: clamp(64px, 8vw, 112px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(36px, 5vw, 72px); align-items: start;">
+      <div>
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9430F; margin-bottom: 20px;">Enquiry</span>
+        <h2 style="margin: 0 0 22px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; letter-spacing: -0.03em;">Request an ESP Component Quote</h2>
+        <p style="margin: 0 0 20px; font-size: 16.5px; line-height: 1.72; color: #3A3F44;">Fill in what you know and leave the rest blank. A drawing, a photograph of the worn component or the dimensions off an existing part will usually get us further than a completed form.</p>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #5D646A;">Prefer to send it directly? Email <a href="mailto:salesats@aeontechsolutions.com?subject=ESP%20internal%20components%20enquiry">salesats@aeontechsolutions.com</a> or message us on <a href="https://wa.me/918584060747" target="_blank" rel="noopener">WhatsApp</a>.</p>
+      </div>
+
+      <div style="border: 1px solid #DCD9D4; background: #FFFFFF;">
+        <div style="background: #16191C; padding: 16px 24px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #EE6A22;">ESP Internal Component Enquiry Form</span>
+        </div>
+
+        <div style="padding: clamp(22px, 3vw, 34px);">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-bottom: 28px;">
+            <sc-for list="{{ uploads }}" as="u" hint-placeholder-count="3">
+              <a href="#quote" onClick="{{ u.pick }}" style="border: 2px dashed {{ u.border }}; background: {{ u.bg }}; padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 10px; text-decoration: none;">
+                <svg viewBox="0 0 40 40" aria-hidden="true" style="width: 26px; height: 26px; display: block;">
+                  <path d="{{ u.icon }}" fill="none" stroke="#C9430F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span style="font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 15.5px; letter-spacing: -0.01em; color: #1A1E21;">{{ u.label }}</span>
+                <span style="font-size: 13px; line-height: 1.5; color: #5D646A;">{{ u.hint }}</span>
+              </a>
+            </sc-for>
+          </div>
+          <input ref="{{ dwgRef }}" onChange="{{ onDwg }}" type="file" multiple="{{ true }}" accept=".pdf,.dwg,.dxf,image/*" aria-label="Upload drawing" style="position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none;" />
+          <input ref="{{ photoRef }}" onChange="{{ onPhoto }}" type="file" multiple="{{ true }}" accept="image/*" aria-label="Upload photograph" style="position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none;" />
+          <input ref="{{ detRef }}" onChange="{{ onDet }}" type="file" multiple="{{ true }}" accept=".pdf,.doc,.docx,.xls,.xlsx,image/*" aria-label="Upload existing component details" style="position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none;" />
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px;">
+            <label style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5D646A;">Name</span>
+              <input type="text" name="name" placeholder="Full name" style="border: 1px solid #C9C5BF; background: #FFFFFF; padding: 14px 15px; font-size: 15px; color: #1A1E21; border-radius: 2px;" style-focus="border-color: #EE6A22; outline: none;" />
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5D646A;">Company</span>
+              <input type="text" name="company" placeholder="Plant or organisation" style="border: 1px solid #C9C5BF; background: #FFFFFF; padding: 14px 15px; font-size: 15px; color: #1A1E21; border-radius: 2px;" style-focus="border-color: #EE6A22; outline: none;" />
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5D646A;">Email</span>
+              <input type="email" name="email" placeholder="name@company.com" style="border: 1px solid #C9C5BF; background: #FFFFFF; padding: 14px 15px; font-size: 15px; color: #1A1E21; border-radius: 2px;" style-focus="border-color: #EE6A22; outline: none;" />
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5D646A;">Phone</span>
+              <input type="tel" name="phone" placeholder="Including country code" style="border: 1px solid #C9C5BF; background: #FFFFFF; padding: 14px 15px; font-size: 15px; color: #1A1E21; border-radius: 2px;" style-focus="border-color: #EE6A22; outline: none;" />
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5D646A;">ESP Manufacturer / OEM</span>
+              <input type="text" name="oem" placeholder="Original supplier, if known" style="border: 1px solid #C9C5BF; background: #FFFFFF; padding: 14px 15px; font-size: 15px; color: #1A1E21; border-radius: 2px;" style-focus="border-color: #EE6A22; outline: none;" />
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5D646A;">Component Name</span>
+              <input type="text" name="component" placeholder="As you refer to it on site" style="border: 1px solid #C9C5BF; background: #FFFFFF; padding: 14px 15px; font-size: 15px; color: #1A1E21; border-radius: 2px;" style-focus="border-color: #EE6A22; outline: none;" />
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5D646A;">Required Quantity</span>
+              <input type="text" name="quantity" placeholder="Per field, per pass or total" style="border: 1px solid #C9C5BF; background: #FFFFFF; padding: 14px 15px; font-size: 15px; color: #1A1E21; border-radius: 2px;" style-focus="border-color: #EE6A22; outline: none;" />
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5D646A;">Material, if known</span>
+              <input type="text" name="material" placeholder="Leave blank if unknown" style="border: 1px solid #C9C5BF; background: #FFFFFF; padding: 14px 15px; font-size: 15px; color: #1A1E21; border-radius: 2px;" style-focus="border-color: #EE6A22; outline: none;" />
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5D646A;">Dimensions, if known</span>
+              <input type="text" name="dimensions" placeholder="Or attach a sketch above" style="border: 1px solid #C9C5BF; background: #FFFFFF; padding: 14px 15px; font-size: 15px; color: #1A1E21; border-radius: 2px;" style-focus="border-color: #EE6A22; outline: none;" />
+            </label>
+          </div>
+
+          <label style="display: flex; flex-direction: column; gap: 8px; margin-top: 18px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5D646A;">Message</span>
+            <textarea name="message" rows="4" placeholder="Application, ESP make and vintage, shutdown window, or the problem you are seeing on the unit." style="border: 1px solid #C9C5BF; background: #FFFFFF; padding: 14px 15px; font-size: 15px; line-height: 1.6; color: #1A1E21; border-radius: 2px; resize: vertical;" style-focus="border-color: #EE6A22; outline: none;"></textarea>
+          </label>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; margin-top: 26px; padding-top: 24px; border-top: 1px solid #DCD9D4;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; line-height: 1.6; letter-spacing: 0.03em; color: #8A8580; max-width: 42ch;">[CONNECT THIS FORM TO YOUR ENQUIRY INBOX BEFORE GOING LIVE]</span>
+            <button type="button" onClick="{{ submit }}" style="display: inline-flex; align-items: center; gap: 12px; background: #16191C; color: #F5F4F2; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 19px 30px; border: 0; border-radius: 2px; cursor: pointer;" style-hover="background: #EE6A22; color: #0D0F11;">Submit Requirement</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="ESP product navigation" style="background: #16191C; padding: clamp(56px, 7vw, 92px) 0;">
+  <div style="max-width: 1560px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px);">
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end; justify-content: space-between; margin-bottom: 36px;">
+      <div style="max-width: 34ch;">
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #EE6A22; margin-bottom: 18px;">ESP Products</span>
+        <h2 style="margin: 0; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: clamp(24px, 2.8vw, 38px); line-height: 1.06; letter-spacing: -0.025em; color: #FFFFFF;">The rest of the ESP product range.</h2>
+      </div>
+      <a href="Products.dc.html" style="font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: #EE6A22;" style-hover="color: #FF8340;">Full Catalogue →</a>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1px;">
+      <a href="ProductCollectingElectrodes.dc.html" style="background: #16191C; box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: 30px 26px 32px; display: block;" style-hover="background: #1F2429;">
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #6E747A;">Collects the dust</span>
+        <span style="display: block; margin-top: 15px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; color: #FFFFFF;">Collecting Electrodes</span>
+        <span style="display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #EE6A22;">View Product →</span>
+      </a>
+      <a href="ProductDischargeElectrodes.dc.html" style="background: #16191C; box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: 30px 26px 32px; display: block;" style-hover="background: #1F2429;">
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #6E747A;">Charges the dust</span>
+        <span style="display: block; margin-top: 15px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; color: #FFFFFF;">Discharge Electrodes</span>
+        <span style="display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #EE6A22;">View Product →</span>
+      </a>
+      <a href="ProductDischargeElectrodes.dc.html#spiral" style="background: #16191C; box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: 30px 26px 32px; display: block;" style-hover="background: #1F2429;">
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #6E747A;">Continuous corona profile</span>
+        <span style="display: block; margin-top: 15px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; color: #FFFFFF;">Spiral Electrodes</span>
+        <span style="display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #EE6A22;">View Section →</span>
+      </a>
+      <a href="#gallery" style="background: #1F2429; box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: 30px 26px 32px; display: block;" style-hover="background: #262C32;">
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #6E747A;">Rapping, frames &amp; gas flow</span>
+        <span style="display: block; margin-top: 15px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; color: #FFFFFF;">ESP Internal Components</span>
+        <span style="display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #8C9298;">You are here</span>
+      </a>
+      <a href="ESP.dc.html#electrical" style="background: #16191C; box-shadow: 0 0 0 1px rgba(255,255,255,0.10); padding: 30px 26px 32px; display: block;" style-hover="background: #1F2429;">
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #6E747A;">Holds the HV</span>
+        <span style="display: block; margin-top: 15px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; color: #FFFFFF;">Insulators &amp; Assemblies</span>
+        <span style="display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #EE6A22;">View Section →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440}}">
+const GALLERY = [
+  ['assets/img/int-hammer-castings.jpg', 'Cast ESP rapping hammers laid out at the works', 'Rapping Hammers', 'Rapping system'],
+  ['assets/img/int-rapper-arms-set.jpg', 'ESP rapper arms with hammers mounted on their shafts, primed and stacked at the works', 'Rapper Arms', 'Rapping system'],
+  ['assets/img/int-anvils.jpg', 'Cast anvil blocks laid out at the works', 'Anvils & Impact Blocks', 'Rapping system'],
+  ['assets/img/int-shafts.jpg', 'Machined rapping shaft sections ready for assembly', 'Rapping Shafts', 'Rapping system'],
+  ['assets/img/int-bushes.jpg', 'Machined bushes turned to size', 'Bushes', 'Hardware'],
+  ['assets/img/int-bearing-housings.jpg', 'Bearing housings with bushes mounted on base plates', 'Bearing Housings', 'Hardware'],
+  ['assets/img/int-tadpole-clamps.jpg', 'Tadpole suspension clamps in red oxide primer, stacked at the works', 'Tadpole Suspension Clamps', 'Hardware'],
+  ['assets/img/int-brackets-pins.jpg', 'Fabricated brackets with pins laid out for inspection', 'Brackets & Pins', 'Structural'],
+  ['assets/img/int-cross-members.jpg', 'Formed channel cross members stacked after priming', 'Cross Members', 'Structural'],
+  ['assets/img/int-frames-yard.jpg', 'Support frames and brackets primed in the works yard', 'Support Frames', 'Structural'],
+  ['assets/img/int-members-primed.jpg', 'Primed structural members stacked in the works', 'Structural Members', 'Structural'],
+  ['assets/img/int-channels.jpg', 'Formed channel sections stacked at the works', 'Formed Channel Sections', 'Structural'],
+  ['assets/img/int-gd-plate.jpg', 'Perforated gas distribution plates primed and stacked', 'Gas Distribution Plates', 'Gas flow'],
+  ['assets/img/int-screen-bars.jpg', 'Gas distribution screen bars laid out on the shop floor', 'Gas Distribution Screens', 'Gas flow'],
+  ['assets/img/int-baffles.jpg', 'Formed baffle and turning vane sections stacked after priming', 'Baffles & Turning Vanes', 'Gas flow'],
+  ['assets/img/int-gd-bars.jpg', 'Perforated flat bars for gas distribution assemblies', 'Perforated Bars', 'Gas flow'],
+  ['assets/img/int-ins-tube.jpg', 'Insulator protection tubes cast and primed at the works', 'Insulator Protection Tubes', 'Hardware'],
+  ['assets/img/int-ubolts.jpg', 'U-bolts finished and bundled for despatch', 'U-Bolts', 'Hardware'],
+  ['assets/img/int-springs.jpg', 'Spring assemblies with cast caps prepared for despatch', 'Spring Assemblies', 'Hardware']
+];
+
+const ALSO = [
+  'Hammer mounting components', 'Pins', 'Spacers', 'Couplings', 'Rapping frames',
+  'Internal structural supports', 'Suspension / support members', 'Connecting members',
+  'Perforated plates', 'Flow-directing plates', 'Clamps', 'Bolts, nuts & washers',
+  'Connecting plates', 'Application-specific hardware'
+];
+
+const SPECS = [
+  ['Component Type', 'As required'],
+  ['Application', 'Electrostatic Precipitator'],
+  ['Material', 'As specified'],
+  ['Dimensions', 'As per customer/OEM drawing'],
+  ['Configuration', 'As per ESP design'],
+  ['Manufacturing / Supply', 'As per requirement'],
+  ['Replacement', 'Existing ESP / Retrofit'],
+  ['Customization', 'Available as per requirement']
+];
+
+const ICON = {
+  wrench: 'M26 6a7 7 0 0 0-9 9L9 23a3 3 0 1 0 4 4l8-8a7 7 0 0 0 9-9l-4 4-5-1-1-5 4-4Z',
+  calendar: 'M8 12h24v20H8zM8 18h24M14 8v6M26 8v6M15 24h4M23 24h4',
+  swap: 'M8 15h20l-5-5M32 25H12l5 5',
+  refresh: 'M32 20a12 12 0 1 1-4-9M32 6v6h-6',
+  upgrade: 'M20 32V10M12 18l8-8 8 8M10 34h20',
+  clock: 'M20 34a14 14 0 1 0 0-28 14 14 0 0 0 0 28ZM20 12v9l6 4',
+  plus: 'M20 8v24M8 20h24',
+  match: 'M14 10h12v8l-6 6-6-6zM20 24v10M12 34h16',
+  camera: 'M8 14h6l3-4h6l3 4h6v18H8zM20 28a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z',
+  eye: 'M4 20s6-9 16-9 16 9 16 9-6 9-16 9S4 20 4 20Zm16 4a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z',
+  factory: 'M6 34V16l8 6V16l8 6V12l12 8v14zM6 34h28',
+  ship: 'M8 24h24l-3 8H11zM20 24V10M14 16h12',
+  doc: 'M12 6h12l6 6v22H12zM24 6v6h6M16 20h10M16 26h10',
+  photo: 'M8 10h24v20H8zM8 26l7-7 5 5 4-4 8 8M25 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z',
+  box: 'M20 6l12 6v16l-12 6-12-6V12zM8 12l12 6 12-6M20 18v20'
+};
+
+const APPS = [
+  ['ESP maintenance', ICON.wrench],
+  ['Planned shutdowns', ICON.calendar],
+  ['Component replacement', ICON.swap],
+  ['ESP refurbishment', ICON.refresh],
+  ['Retrofit projects', ICON.upgrade],
+  ['Life-extension projects', ICON.clock],
+  ['New ESP installations', ICON.plus],
+  ['OEM-equivalent replacement', ICON.match]
+];
+
+const STEPS = [
+  ['01', 'Share Photo / Drawing / Sample', 'Send whatever you have — a photograph, a sketch with dimensions, an OEM drawing or the worn component itself.', ICON.camera],
+  ['02', 'Technical Evaluation', 'We review the requirement and identify the information still needed to develop or source the component.', ICON.eye],
+  ['03', 'Manufacturing / Supply', 'The component is manufactured or sourced to the agreed drawing and material specification.', ICON.factory],
+  ['04', 'Inspection & Dispatch', 'Inspected against the approved documentation, then packed and despatched to site.', ICON.ship]
+];
+
+class Component extends DCLogic {
+  state = { dwg: [], photo: [], det: [] };
+
+  constructor(props) {
+    super(props);
+    this.dwgRef = React.createRef();
+    this.photoRef = React.createRef();
+    this.detRef = React.createRef();
+  }
+
+  picker(ref) { return e => { e.preventDefault(); if (ref.current) ref.current.click(); }; }
+  handler(key) {
+    return e => {
+      const list = e.target.files ? Array.prototype.slice.call(e.target.files) : [];
+      this.setState({ [key]: list.map(f => f.name) });
+    };
+  }
+
+  renderVals() {
+    const mk = (key, ref, label, hint, icon) => {
+      const n = this.state[key].length;
+      return {
+        pick: this.picker(ref),
+        label: n ? (n === 1 ? '1 file attached' : n + ' files attached') : label,
+        hint: n ? this.state[key].join(', ') : hint,
+        border: n ? '#EE6A22' : '#C9C5BF',
+        bg: n ? 'rgba(238,106,34,0.06)' : '#FAF9F7',
+        icon: icon
+      };
+    };
+    const allFiles = [].concat(this.state.dwg, this.state.photo, this.state.det);
+
+    return {
+      gallery: GALLERY.map(g => ({ img: g[0], alt: g[1], t: g[2], tag: g[3] })),
+      also: ALSO,
+      specs: SPECS.map((s, i) => ({ k: s[0], v: s[1], bg: i % 2 ? '#FAF9F7' : '#FFFFFF' })),
+      apps: APPS.map(a => ({ t: a[0], icon: a[1] })),
+      steps: STEPS.map(s => ({ n: s[0], t: s[1], d: s[2], icon: s[3] })),
+      dwgRef: this.dwgRef, photoRef: this.photoRef, detRef: this.detRef,
+      onDwg: this.handler('dwg'), onPhoto: this.handler('photo'), onDet: this.handler('det'),
+      uploads: [
+        mk('dwg', this.dwgRef, 'Upload Drawing', 'PDF, DWG, DXF or a photograph of a printed drawing.', ICON.doc),
+        mk('photo', this.photoRef, 'Upload Photograph', 'The component in the field, or the worn part on the bench.', ICON.photo),
+        mk('det', this.detRef, 'Existing Component Details', 'Old datasheet, purchase order, nameplate or sketch.', ICON.box)
+      ],
+      submit: () => {
+        const body = allFiles.length
+          ? 'Please see attached: ' + allFiles.join(', ') + '\n\n(Attach the files to this email before sending.)'
+          : '';
+        window.location.href = 'mailto:salesats@aeontechsolutions.com'
+          + '?subject=' + encodeURIComponent('ESP internal components enquiry')
+          + (body ? '&body=' + encodeURIComponent(body) : '');
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
